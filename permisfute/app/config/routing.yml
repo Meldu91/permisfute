@@ -1,0 +1,7 @@
+permisfute:
+    resource: "@PermisfuteBundle/Resources/config/routing.yml"
+    prefix:   /Permisfute
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

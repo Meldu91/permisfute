@@ -1,0 +1,4 @@
+services:
+#    permisfute.example:
+#        class: Permisfute\PermisfuteBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
