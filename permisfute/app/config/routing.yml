@@ -1,6 +1,13 @@
+utilisateurs:
+    resource: "@UtilisateursBundle/Resources/config/routing.yml"
+    prefix:   /
+
 permisfute:
     resource: "@PermisfuteBundle/Resources/config/routing.yml"
     prefix:   /Permisfute
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 app:
     resource: "@AppBundle/Controller/"
