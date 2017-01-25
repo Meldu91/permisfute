@@ -13,3 +13,7 @@ permisfute_services:
 permisfute_contact:
     path:     /contact
     defaults: { _controller: PermisfuteBundle:Contact:contact }
+
+permisfute_inscription:
+    path:     /inscription
+    defaults: { _controller: PermisfuteBundle:Inscription:inscription }

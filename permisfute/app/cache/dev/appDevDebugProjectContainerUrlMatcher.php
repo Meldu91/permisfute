@@ -135,6 +135,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ContactController::contactAction',  '_route' => 'permisfute_contact',);
             }
 
+            // permisfute_inscription
+            if ($pathinfo === '/Permisfute/inscription') {
+                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\InscriptionController::inscriptionAction',  '_route' => 'permisfute_inscription',);
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/log')) {
