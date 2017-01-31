@@ -1,0 +1,19 @@
+permisfute_homepage:
+    path:     /index
+    defaults: { _controller: PermisfuteBundle:Accueil:accueil }
+
+permisfute_tarifs:
+    path:     /tarifs
+    defaults: { _controller: PermisfuteBundle:Tarifs:tarifs }
+
+permisfute_services:
+    path:     /services
+    defaults: { _controller: PermisfuteBundle:Services:services }
+
+permisfute_contact:
+    path:     /contact
+    defaults: { _controller: PermisfuteBundle:Contact:contact }
+
+permisfute_inscription:
+    path:     /inscription
+    defaults: { _controller: PermisfuteBundle:Inscription:inscription }
