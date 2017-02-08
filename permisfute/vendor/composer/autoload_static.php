@@ -47,6 +47,7 @@ class ComposerStaticInite1d59f45f98b689488435daefec6a5d9
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'PUGX\\MultiUserBundle\\' => 21,
         ),
         'M' => 
         array (
@@ -152,6 +153,10 @@ class ComposerStaticInite1d59f45f98b689488435daefec6a5d9
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'PUGX\\MultiUserBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pugx/multi-user-bundle',
         ),
         'Monolog\\' => 
         array (
