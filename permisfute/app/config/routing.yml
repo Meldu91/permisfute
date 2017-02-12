@@ -12,3 +12,11 @@ fos_user:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+Client_registration:
+    path:  /register/Client
+    defaults: { _controller: UtilisateursBundle:RegistrationClient:register }
+
+Montieur_registration:
+    path:  /register/Moniteur
+    defaults: { _controller: UtilisateursBundle:RegistrationMoniteur:register }
