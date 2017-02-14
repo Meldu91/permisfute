@@ -12,14 +12,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Vehicule
 {
-    
-    /**
-     * @ORM\OneToMany(target="Permisfute\PermisfuteBundle\Entity\Lecon")
-     * @ORM\JoincColumn(nullable=false)
-     */
-    
-    private $lecon;
-    
     /**
      * @var int
      *

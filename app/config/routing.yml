@@ -7,8 +7,16 @@ permisfute:
     prefix:   /Permisfute
 
 fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml" # MODIFIER LA ROUTE APRES
 
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+client_registration:
+    path:  /register/client
+    defaults: { _controller: UtilisateursUtilisateursBundle:RegistrationClient:register }
+
+moniteur_registration:
+    path:  /register/moniteur
+    defaults: { _controller: UtilisateursUtilisateursBundle:RegistrationMoniteur:register }
