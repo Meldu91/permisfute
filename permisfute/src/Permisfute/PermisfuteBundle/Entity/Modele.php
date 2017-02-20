@@ -12,14 +12,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Modele
 {
-    
-    /**
-     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\vehicule")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    
-    private $vehicule;
-    
     /**
      * @var int
      *

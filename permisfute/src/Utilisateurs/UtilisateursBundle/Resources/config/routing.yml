@@ -1,3 +1,7 @@
-utilisateurs_homepage:
-    path:     /
-    defaults: { _controller: UtilisateursBundle:Default:index }
+client_homepage:
+    path:     /Client
+    defaults: { _controller: UtilisateursBundle:Client:register }
+
+moniteur_homepage:
+    path:     /Moniteur
+    defaults: { _controller: UtilisateursBundle:Moniteur:register }

@@ -13,13 +13,6 @@ use Doctrine\ORM\Mapping as ORM;
 class Vehicule
 {
     /**
-     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\lecon")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    
-    private $lecon;
-    
-    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")

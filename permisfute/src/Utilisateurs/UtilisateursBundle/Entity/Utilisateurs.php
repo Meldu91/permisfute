@@ -11,7 +11,6 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
  * @ORM\DiscriminatorMap({"Client" = "Client", "Moniteur" = "Moniteur"})
- *
  */
 
 abstract class Utilisateurs extends BaseUser
@@ -23,19 +22,46 @@ abstract class Utilisateurs extends BaseUser
      */
     protected $id;
     
-    /**
-     * @ORM\Column(type="string", length=100)
+   /**
+     * @var string
      *
-     * @Assert\NotBlank(message="Veuillez saisir votre nom", groups={"Registration", "Profile"})
-     * @Assert\Length
-     * (
-     *     min=3,
-     *     max=100,
-     *     minMessage="Le nom entré est trop petit",
-     *     maxMessage="Le nom entré est trop long",
-     *     groups={"Registration", "Profile"}
-     * )
+     * @ORM\Column(name="nom", type="string", length=100)
      */
-    protected $nom;
+    private $nom;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=50)
+     */
+    private $prenom;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dateNaissance", type="date", length=100)
+     */
+    private $dateNaissance;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user", type="string", length=50)
+     */
+    private $user;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mdp", type="string", length=50)
+     */
+    private $mdp;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=100)
+     */
+    private $email;
     
 }

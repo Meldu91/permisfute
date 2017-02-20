@@ -1,0 +1,13 @@
+{% extends '::layout/layout.html.twig' %}
+
+{% block fos_user_content %}
+    {% trans_default_domain 'FOSUserBundle' %}
+    <div class="container">
+        <form action="{{ path('creation_moniteur') }}" {{ form_enctype(form) }} method="POST">
+            {{ form_widget(form) }}
+            <div>
+                <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}" />
+            </div>
+        </form>
+    </div>
+{% endblock fos_user_content %}

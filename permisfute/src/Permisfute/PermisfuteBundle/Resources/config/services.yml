@@ -1,8 +1,4 @@
 services:
-    
-fos_user:
-    db_driver: orm
-    firewall_name: main
-    user_class: Utilisateurs\UtilisateursBundle\Entity\Utilisateurs
-    service:
-        user_manager: pugx_user_manager
+#    permisfute.example:
+#        class: Permisfute\PermisfuteBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
