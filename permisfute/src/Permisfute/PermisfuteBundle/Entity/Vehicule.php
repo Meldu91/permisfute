@@ -13,6 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
 class Vehicule
 {
     /**
+     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\modele", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    
+    private $modele;
+ 
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -120,5 +127,17 @@ class Vehicule
     public function getNbkm()
     {
         return $this->nbkm;
+    }
+    
+    public function setModele(modele $modele)
+    {
+        $this->modele = $modele;
+        
+        return $this;
+    }
+    
+    public function getModele()
+    {
+        return $this->modele;
     }
 }

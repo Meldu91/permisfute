@@ -9,7 +9,14 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="modele")
  * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\ModeleRepository")
+ * @ORM\InheritanceType("SINGLE_TABLE")
+ * @ORM\DiscriminatorColumn(name="modeleType", type="string")
+ * @ORM\DiscriminatorMap({
+ *      "voiture" = "voiture",
+ *      "moto" = "moto",
+ * })
  */
+
 class Modele
 {
     /**

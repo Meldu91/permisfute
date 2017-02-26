@@ -17,8 +17,7 @@
         "sensio/distribution-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        "friendsofsymfony/user-bundle": "2.0.*@dev",
-        "pugx/multi-user-bundle": "3.0.*@dev"
+        "friendsofsymfony/user-bundle": "~2.0@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
@@ -46,7 +45,6 @@
             "php": "5.3.9"
         }
     },
-    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

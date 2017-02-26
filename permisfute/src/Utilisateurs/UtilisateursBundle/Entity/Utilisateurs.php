@@ -8,12 +8,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
  * @ORM\Table(name="utilisateurs")
- * @ORM\InheritanceType("JOINED")
- * @ORM\DiscriminatorColumn(name="type", type="string")
- * @ORM\DiscriminatorMap({"Client" = "Client", "Moniteur" = "Moniteur"})
  */
-
-abstract class Utilisateurs extends BaseUser
+class Utilisateurs extends BaseUser
 {
     /**
      * @ORM\Id
@@ -22,46 +18,266 @@ abstract class Utilisateurs extends BaseUser
      */
     protected $id;
     
-   /**
-     * @var string
+    /**
      *
-     * @ORM\Column(name="nom", type="string", length=100)
+     * @var string
+     * @ORM\Column(type="string", length=50)
      */
+    
     private $nom;
     
-    /**
-     * @var string
+     /**
      *
-     * @ORM\Column(name="prenom", type="string", length=50)
+     * @var string
+     * @ORM\Column(type="string", length=50)
      */
+   
     private $prenom;
     
     /**
-     * @var string
+     * @var \DateTime
      *
-     * @ORM\Column(name="dateNaissance", type="date", length=100)
+     * @ORM\Column(type="date")
      */
+    
     private $dateNaissance;
     
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="user", type="string", length=50)
+     * @ORM\Column(type="integer", length=10)
      */
-    private $user;
+    
+    private $telephone;
+    
+     /** 
+     *
+     * @var type string
+     * 
+     * @ORM\column(type="string", length=100)
+     */
+    
+    private $adresse;
+       
+    /** 
+     *
+     * @var type string
+     * 
+     * @ORM\column(type="string", length=50, nullable=true)
+     */
+    
+    private $niveauEtude;
+    
+    /** 
+     *
+     * @var type string
+     * 
+     * @ORM\column(type="string", length=50, nullable=true)
+     */
+    
+    private $nomETablissement;
+    
+    /** 
+     *
+     * @var type string
+     * 
+     * @ORM\column(type="string", length=100, nullable=true)
+     */
+    
+    private $entrepriseSalarie;
+    
+    
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
+
+    
+    ############################## GETTERS AND SETTERS ##########################
+    
     
     /**
-     * @var string
+     * Set nom
      *
-     * @ORM\Column(name="mdp", type="string", length=50)
+     * @param string $nom
+     * @return Utilisateurs
      */
-    private $mdp;
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     * @return Utilisateurs
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string 
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set dateNaissance
+     *
+     * @param \DateTime $dateNaissance
+     * @return Utilisateurs
+     */
+    public function setDateNaissance($dateNaissance)
+    {
+        $this->dateNaissance = $dateNaissance;
+
+        return $this;
+    }
+
+    /**
+     * Get dateNaissance
+     *
+     * @return \DateTime 
+     */
+    public function getDateNaissance()
+    {
+        return $this->dateNaissance;
+    }
+
+    /**
+     * Set telephone
+     *
+     * @param integer $telephone
+     * @return Utilisateurs
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Get telephone
+     *
+     * @return integer 
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
     
     /**
-     * @var string
+     * Set niveauEtude
      *
-     * @ORM\Column(name="email", type="string", length=100)
+     * @param string $niveauEtude
+     * @return Utilisateurs
      */
-    private $email;
-    
+    public function setNiveauEtude($niveauEtude)
+    {
+        $this->niveauEtude = $niveauEtude;
+
+        return $this;
+    }
+
+    /**
+     * Get niveauEtude
+     *
+     * @return string 
+     */
+    public function getNiveauEtude()
+    {
+        return $this->niveauEtude;
+    }
+
+    /**
+     * Set nomETablissement
+     *
+     * @param string $nomETablissement
+     * @return Utilisateurs
+     */
+    public function setNomETablissement($nomETablissement)
+    {
+        $this->nomETablissement = $nomETablissement;
+
+        return $this;
+    }
+
+    /**
+     * Get nomETablissement
+     *
+     * @return string 
+     */
+    public function getNomETablissement()
+    {
+        return $this->nomETablissement;
+    }
+
+    /**
+     * Set entrepriseSalarie
+     *
+     * @param string $entrepriseSalarie
+     * @return Utilisateurs
+     */
+    public function setEntrepriseSalarie($entrepriseSalarie)
+    {
+        $this->entrepriseSalarie = $entrepriseSalarie;
+
+        return $this;
+    }
+
+    /**
+     * Get entrepriseSalarie
+     *
+     * @return string 
+     */
+    public function getEntrepriseSalarie()
+    {
+        return $this->entrepriseSalarie;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     * @return Utilisateurs
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string 
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
 }

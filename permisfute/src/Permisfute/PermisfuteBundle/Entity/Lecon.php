@@ -13,6 +13,14 @@ use Doctrine\ORM\Mapping as ORM;
 class Lecon
 {
     /**
+     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\vehicule", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    
+    private $vehicule;
+    
+    
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -90,5 +98,16 @@ class Lecon
     public function getTarifHeure()
     {
         return $this->tarifHeure;
+    }
+    
+    public function setVehicule(Vehicule $vehicule)
+    {
+        $this->vehicule = $vehicule;
+        return $this;
+    }
+    
+     public function getVehicule()
+    {
+        return $this->vehicule;
     }
 }

@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="voiture")
  * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\VoitureRepository")
  */
-class Voiture
+Abstract class Voiture extends Modele
 {
     /**
      * @var int
