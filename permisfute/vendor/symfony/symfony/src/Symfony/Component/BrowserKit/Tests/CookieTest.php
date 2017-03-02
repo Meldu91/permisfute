@@ -88,11 +88,10 @@ class CookieTest extends \PHPUnit_Framework_TestCase
         Cookie::fromString('foo');
     }
 
-    public function testFromStringIgnoresInvalidExpiresDate()
+    public function testFromStringThrowsAnExceptionIfCookieDateIsNotValid()
     {
-        $cookie = Cookie::fromString('foo=bar; expires=Flursday July 31st 2020, 08:49:37 GMT');
-
-        $this->assertFalse($cookie->isExpired());
+        $this->setExpectedException('InvalidArgumentException');
+        Cookie::fromString('foo=bar; expires=Flursday July 31st 2020, 08:49:37 GMT');
     }
 
     public function testFromStringThrowsAnExceptionIfUrlIsNotValid()

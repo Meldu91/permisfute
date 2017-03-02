@@ -68,10 +68,6 @@ class ReflectionExtractor implements PropertyListExtractorInterface, PropertyTyp
         }
 
         foreach ($reflectionClass->getMethods(\ReflectionMethod::IS_PUBLIC) as $reflectionMethod) {
-            if ($reflectionMethod->isStatic()) {
-                continue;
-            }
-
             $propertyName = $this->getPropertyName($reflectionMethod->name);
             if (!$propertyName || isset($properties[$propertyName])) {
                 continue;
@@ -262,9 +258,6 @@ class ReflectionExtractor implements PropertyListExtractorInterface, PropertyTyp
         foreach (self::$accessorPrefixes as $prefix) {
             try {
                 $reflectionMethod = new \ReflectionMethod($class, $prefix.$ucProperty);
-                if ($reflectionMethod->isStatic()) {
-                    continue;
-                }
 
                 if (0 === $reflectionMethod->getNumberOfRequiredParameters()) {
                     return array($reflectionMethod, $prefix);
@@ -293,9 +286,6 @@ class ReflectionExtractor implements PropertyListExtractorInterface, PropertyTyp
         foreach (self::$mutatorPrefixes as $prefix) {
             try {
                 $reflectionMethod = new \ReflectionMethod($class, $prefix.$ucProperty);
-                if ($reflectionMethod->isStatic()) {
-                    continue;
-                }
 
                 // Parameter can be optional to allow things like: method(array $foo = null)
                 if ($reflectionMethod->getNumberOfParameters() >= 1) {

@@ -10,8 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="moniteur")
  * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\MoniteurRepository")
  */
-class Moniteur
-{
+class Moniteur 
+{     
     /**
      * @var int
      *

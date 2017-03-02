@@ -1123,7 +1123,7 @@ LEFT JOIN user_cons_columns r_cols
             'nvarchar2'         => 'string',
             'char'              => 'string',
             'nchar'             => 'string',
-            'date'              => 'date',
+            'date'              => 'datetime',
             'timestamp'         => 'datetime',
             'timestamptz'       => 'datetimetz',
             'float'             => 'float',

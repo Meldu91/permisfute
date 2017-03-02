@@ -19,7 +19,6 @@ class AppKernel extends Kernel
             new Permisfute\PermisfuteBundle\PermisfuteBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Utilisateurs\UtilisateursBundle\UtilisateursBundle(),
-            new PUGX\MultiUserBundle\PUGXMultiUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

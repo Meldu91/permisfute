@@ -1,5 +1,6 @@
 services:
-#    utilisateurs.example:
-#        class: Utilisateurs\UtilisateursBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
-   
+
+    etudiant.form.registration:
+        class: Utilisateurs\UtilisateursBundle\Form\EtudiantRegistrationType
+        tags:
+            - {name: form.type, alias: etudiant_user_registration}

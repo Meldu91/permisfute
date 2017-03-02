@@ -140,7 +140,7 @@ EOF
         }
         if ($type === 'functions' || $type === 'filters') {
             $cb = $entity->getCallable();
-            if (null === $cb) {
+            if (is_null($cb)) {
                 return;
             }
             if (is_array($cb)) {

@@ -77,28 +77,12 @@ class DateTypeTest extends TestCase
         $this->assertEquals('2010-06-02', $form->getViewData());
     }
 
-    public function testSubmitFromSingleTextDateTimeWithCustomFormat()
-    {
-        $form = $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
-            'model_timezone' => 'UTC',
-            'view_timezone' => 'UTC',
-            'widget' => 'single_text',
-            'input' => 'datetime',
-            'format' => 'yyyy',
-        ));
-
-        $form->submit('2010');
-
-        $this->assertDateTimeEquals(new \DateTime('2010-01-01 UTC'), $form->getData());
-        $this->assertEquals('2010', $form->getViewData());
-    }
-
     public function testSubmitFromSingleTextDateTime()
     {
-        // we test against "de_DE", so we need the full implementation
+        // we test against "de_AT", so we need the full implementation
         IntlTestHelper::requireFullIntl($this, false);
 
-        \Locale::setDefault('de_DE');
+        \Locale::setDefault('de_AT');
 
         $form = $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
             'format' => \IntlDateFormatter::MEDIUM,
@@ -116,10 +100,10 @@ class DateTypeTest extends TestCase
 
     public function testSubmitFromSingleTextString()
     {
-        // we test against "de_DE", so we need the full implementation
+        // we test against "de_AT", so we need the full implementation
         IntlTestHelper::requireFullIntl($this, false);
 
-        \Locale::setDefault('de_DE');
+        \Locale::setDefault('de_AT');
 
         $form = $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
             'format' => \IntlDateFormatter::MEDIUM,
@@ -137,10 +121,10 @@ class DateTypeTest extends TestCase
 
     public function testSubmitFromSingleTextTimestamp()
     {
-        // we test against "de_DE", so we need the full implementation
+        // we test against "de_AT", so we need the full implementation
         IntlTestHelper::requireFullIntl($this, false);
 
-        \Locale::setDefault('de_DE');
+        \Locale::setDefault('de_AT');
 
         $form = $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
             'format' => \IntlDateFormatter::MEDIUM,
@@ -160,10 +144,10 @@ class DateTypeTest extends TestCase
 
     public function testSubmitFromSingleTextRaw()
     {
-        // we test against "de_DE", so we need the full implementation
+        // we test against "de_AT", so we need the full implementation
         IntlTestHelper::requireFullIntl($this, false);
 
-        \Locale::setDefault('de_DE');
+        \Locale::setDefault('de_AT');
 
         $form = $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
             'format' => \IntlDateFormatter::MEDIUM,
@@ -363,25 +347,12 @@ class DateTypeTest extends TestCase
 
     /**
      * @expectedException \Symfony\Component\OptionsResolver\Exception\InvalidOptionsException
-     * @expectedExceptionMessage The "format" option should contain the letters "y", "M" and "d". Its current value is "yy".
      */
     public function testThrowExceptionIfFormatDoesNotContainYearMonthAndDay()
     {
         $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
             'months' => array(6, 7),
             'format' => 'yy',
-        ));
-    }
-
-    /**
-     * @expectedException \Symfony\Component\OptionsResolver\Exception\InvalidOptionsException
-     * @expectedExceptionMessage The "format" option should contain the letters "y", "M" or "d". Its current value is "wrong".
-     */
-    public function testThrowExceptionIfFormatMissesYearMonthAndDayWithSingleTextWidget()
-    {
-        $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
-            'widget' => 'single_text',
-            'format' => 'wrong',
         ));
     }
 
@@ -437,10 +408,10 @@ class DateTypeTest extends TestCase
 
     public function testSetDataWithNegativeTimezoneOffsetStringInput()
     {
-        // we test against "de_DE", so we need the full implementation
+        // we test against "de_AT", so we need the full implementation
         IntlTestHelper::requireFullIntl($this, false);
 
-        \Locale::setDefault('de_DE');
+        \Locale::setDefault('de_AT');
 
         $form = $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
             'format' => \IntlDateFormatter::MEDIUM,
@@ -459,10 +430,10 @@ class DateTypeTest extends TestCase
 
     public function testSetDataWithNegativeTimezoneOffsetDateTimeInput()
     {
-        // we test against "de_DE", so we need the full implementation
+        // we test against "de_AT", so we need the full implementation
         IntlTestHelper::requireFullIntl($this, false);
 
-        \Locale::setDefault('de_DE');
+        \Locale::setDefault('de_AT');
 
         $form = $this->factory->create('Symfony\Component\Form\Extension\Core\Type\DateType', null, array(
             'format' => \IntlDateFormatter::MEDIUM,
