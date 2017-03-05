@@ -31,10 +31,10 @@ class EtudiantRegistrationType extends AbstractType
                     "label" => "Adresse"
                 ])
                 
-                ->add('niveauEtude', null, [
-                    "label" => "Niveau d'études"
+                ->add('nomFormation', null, [
+                    "label" => "Nom de la formations"
                 ])
-                
+                              
                 ->add('nomEtablissement', null, [
                     "label" => "Nom de l'établissement"
                 ])

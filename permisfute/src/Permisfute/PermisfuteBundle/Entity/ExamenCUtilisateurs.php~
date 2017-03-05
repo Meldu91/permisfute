@@ -1,0 +1,58 @@
+<?php
+
+namespace Permisfute\PermisfuteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ExamenCUtilisateurs
+ *
+ * @ORM\Table(name="examen_c_utilisateurs")
+ * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\ExamenCUtilisateursRepository")
+ */
+class ExamenCUtilisateurs
+{
+    /**
+     * @ORM\Id
+     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\ExamenC")
+     */
+    
+    private $examen_c;
+       
+    /**
+     * @ORM\Id
+     * @ORM\ManyToOne(targetEntity="Utilisateurs\UtilisateursBundle\Entity\Utilisateurs")
+     */
+
+    private $utilisateurs;
+ 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelleC", type="string", length=100)
+     */
+    private $libelleC;
+
+    /**
+     * Set libelleC
+     *
+     * @param string $libelleC
+     * @return ExamenCUtilisateurs
+     */
+    public function setLibelleC($libelleC)
+    {
+        $this->libelleC = $libelleC;
+
+        return $this;
+    }
+
+    /**
+     * Get libelleC
+     *
+     * @return string 
+     */
+    public function getLibelleC()
+    {
+        return $this->libelleC;
+    }
+}

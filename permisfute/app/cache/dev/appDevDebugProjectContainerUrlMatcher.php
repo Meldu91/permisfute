@@ -114,32 +114,29 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'UtilisateursBundle:Default:index',  '_route' => 'utilisateurs_homepage',);
         }
 
-        if (0 === strpos($pathinfo, '/Permisfute')) {
-            // permisfute_homepage
-            if ($pathinfo === '/Permisfute/index') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\AccueilController::accueilAction',  '_route' => 'permisfute_homepage',);
-            }
+        // permisfute_homepage
+        if ($pathinfo === '/index') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\AccueilController::accueilAction',  '_route' => 'permisfute_homepage',);
+        }
 
-            // permisfute_tarifs
-            if ($pathinfo === '/Permisfute/tarifs') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\TarifsController::tarifsAction',  '_route' => 'permisfute_tarifs',);
-            }
+        // permisfute_tarifs
+        if ($pathinfo === '/tarifs') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\TarifsController::tarifsAction',  '_route' => 'permisfute_tarifs',);
+        }
 
-            // permisfute_services
-            if ($pathinfo === '/Permisfute/services') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ServicesController::servicesAction',  '_route' => 'permisfute_services',);
-            }
+        // permisfute_services
+        if ($pathinfo === '/services') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ServicesController::servicesAction',  '_route' => 'permisfute_services',);
+        }
 
-            // permisfute_contact
-            if ($pathinfo === '/Permisfute/contact') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ContactController::contactAction',  '_route' => 'permisfute_contact',);
-            }
+        // permisfute_contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ContactController::contactAction',  '_route' => 'permisfute_contact',);
+        }
 
-            // permisfute_inscription
-            if ($pathinfo === '/Permisfute/inscription') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\InscriptionController::inscriptionAction',  '_route' => 'permisfute_inscription',);
-            }
-
+        // permisfute_inscription
+        if ($pathinfo === '/inscription') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\InscriptionController::inscriptionAction',  '_route' => 'permisfute_inscription',);
         }
 
         if (0 === strpos($pathinfo, '/log')) {

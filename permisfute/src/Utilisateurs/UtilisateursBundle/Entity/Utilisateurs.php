@@ -59,23 +59,23 @@ class Utilisateurs extends BaseUser
     
     private $adresse;
        
-    /** 
+   /** 
      *
      * @var type string
      * 
-     * @ORM\column(type="string", length=50, nullable=true)
+     * @ORM\column(type="string", length=100, nullable=true)
      */
     
-    private $niveauEtude;
+    private $nomFormation;
     
     /** 
      *
-     * @var type string
+     * @var float
      * 
-     * @ORM\column(type="string", length=50, nullable=true)
+     * @ORM\column(type="float", nullable=true)
      */
     
-    private $nomETablissement;
+    private $tauxReduction;
     
     /** 
      *
@@ -84,19 +84,17 @@ class Utilisateurs extends BaseUser
      * @ORM\column(type="string", length=100, nullable=true)
      */
     
-    private $entrepriseSalarie;
+    private $nomEtablissement;
     
+    /** 
+     *
+     * @var type string
+     * 
+     * @ORM\column(type="string", length=100, nullable=true)
+     */
     
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-    }
+    private $nomEntreprise;
 
-    
-    ############################## GETTERS AND SETTERS ##########################
-    
-    
     /**
      * Set nom
      *
@@ -188,75 +186,6 @@ class Utilisateurs extends BaseUser
     {
         return $this->telephone;
     }
-    
-    /**
-     * Set niveauEtude
-     *
-     * @param string $niveauEtude
-     * @return Utilisateurs
-     */
-    public function setNiveauEtude($niveauEtude)
-    {
-        $this->niveauEtude = $niveauEtude;
-
-        return $this;
-    }
-
-    /**
-     * Get niveauEtude
-     *
-     * @return string 
-     */
-    public function getNiveauEtude()
-    {
-        return $this->niveauEtude;
-    }
-
-    /**
-     * Set nomETablissement
-     *
-     * @param string $nomETablissement
-     * @return Utilisateurs
-     */
-    public function setNomETablissement($nomETablissement)
-    {
-        $this->nomETablissement = $nomETablissement;
-
-        return $this;
-    }
-
-    /**
-     * Get nomETablissement
-     *
-     * @return string 
-     */
-    public function getNomETablissement()
-    {
-        return $this->nomETablissement;
-    }
-
-    /**
-     * Set entrepriseSalarie
-     *
-     * @param string $entrepriseSalarie
-     * @return Utilisateurs
-     */
-    public function setEntrepriseSalarie($entrepriseSalarie)
-    {
-        $this->entrepriseSalarie = $entrepriseSalarie;
-
-        return $this;
-    }
-
-    /**
-     * Get entrepriseSalarie
-     *
-     * @return string 
-     */
-    public function getEntrepriseSalarie()
-    {
-        return $this->entrepriseSalarie;
-    }
 
     /**
      * Set adresse
@@ -279,5 +208,97 @@ class Utilisateurs extends BaseUser
     public function getAdresse()
     {
         return $this->adresse;
+    }
+
+    /**
+     * Set nomFormation
+     *
+     * @param string $nomFormation
+     * @return Utilisateurs
+     */
+    public function setNomFormation($nomFormation)
+    {
+        $this->nomFormation = $nomFormation;
+
+        return $this;
+    }
+
+    /**
+     * Get nomFormation
+     *
+     * @return string 
+     */
+    public function getNomFormation()
+    {
+        return $this->nomFormation;
+    }
+
+    /**
+     * Set tauxReduction
+     *
+     * @param float $tauxReduction
+     * @return Utilisateurs
+     */
+    public function setTauxReduction($tauxReduction)
+    {
+        $this->tauxReduction = $tauxReduction;
+
+        return $this;
+    }
+
+    /**
+     * Get tauxReduction
+     *
+     * @return float 
+     */
+    public function getTauxReduction()
+    {
+        return $this->tauxReduction;
+    }
+
+    /**
+     * Set nomEtablissement
+     *
+     * @param string $nomEtablissement
+     * @return Utilisateurs
+     */
+    public function setNomEtablissement($nomEtablissement)
+    {
+        $this->nomEtablissement = $nomEtablissement;
+
+        return $this;
+    }
+
+    /**
+     * Get nomEtablissement
+     *
+     * @return string 
+     */
+    public function getNomEtablissement()
+    {
+        return $this->nomEtablissement;
+    }
+
+    /**
+     * Set nomEntreprise
+     *
+     * @param string $nomEntreprise
+     * @return Utilisateurs
+     */
+    public function setNomEntreprise($nomEntreprise)
+    {
+        $this->nomEntreprise = $nomEntreprise;
+
+        return $this;
+    }
+
+    /**
+     * Get nomEntreprise
+     *
+     * @return string 
+     */
+    public function getNomEntreprise()
+    {
+        return $this->nomEntreprise;
     }
 }
