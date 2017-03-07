@@ -5,15 +5,15 @@
     
     <section id="contact-info">
         <div class="center">                
-            <h2>How to Reach Us?</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <h2>Comment nous contacter ?</h2>
+            <p class="lead">Pour nous contacter merci de suivre les instructions ci-dessous</p>
         </div>
         <div class="gmap-area">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5 text-center">
                         <div class="gmap">
-                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=JoomShaper,+Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=joomshaper&amp;sll=37.0625,-95.677068&amp;sspn=42.766543,80.332031&amp;ie=UTF8&amp;hq=JoomShaper,&amp;hnear=Dhaka,+Dhaka+Division,+Bangladesh&amp;ll=23.73854,90.385504&amp;spn=0.001515,0.002452&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=1073661719450182870&amp;output=embed"></iframe>
+                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.174131595446!2d2.2842176149530404!3d48.89301850622307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f83fa131f59%3A0x6a66c3981ee10eb9!2s61+Rue+Voltaire%2C+92300+Levallois-Perret!5e0!3m2!1sfr!2sfr!4v1487069322773;output=embed"></iframe>
                         </div>
                     </div>
 
@@ -21,38 +21,26 @@
                         <ul class="row">
                             <li class="col-sm-6">
                                 <address>
-                                    <h5>Head Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zonal Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>                                
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
+                                    <h5>Notre auto-école :</h5>
+                                    <p>61 Rue Voltaire<br>
+                                        Levallois-Perret, 92300<br>
+                                       France</p>
+                                    <p>Phone: 01 23 56 70 80 <br>
+                                        Email : PermisFute@gmail.fr</p>
                                 </address>
                             </li>
-
-
+                        </ul>
+                        
+                        <ul class="row">
                             <li class="col-sm-6">
                                 <address>
-                                    <h5>Zone#2 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zone#3 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
+                                    <h5>Horaire d'ouverture :</h5>
+                                    <p><B>Lundi</B> :  FERME <br>
+                                        <B>Mardi</B> : 10H/12H - 14H/18H <br>
+                                        <B>Mercredi</B> : 10H/12H - 14H/18H <br>
+                                        <B>Jeudi</B> : 10H/12H - 14H/18H <br>
+                                        <B>Vendredi</B> : 10H/12H - 14H/18H <br>
+                                        <B>Samedi</B> : 10H/12H - 14H/18H 
                                 </address>
                             </li>
                         </ul>
@@ -65,15 +53,19 @@
     <section id="contact-page">
         <div class="container">
             <div class="center">        
-                <h2>Drop Your Message</h2>
-                <p class="lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2>Envoyez un message</h2>
+                <p class="lead">Pour toute demande spécifique merci de nous écrire un message.</p>
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
                 <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
                     <div class="col-sm-5 col-sm-offset-1">
                         <div class="form-group">
-                            <label>Name *</label>
+                            <label>Nom *</label>
+                            <input type="text" name="name" class="form-control" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label>Prénom *</label>
                             <input type="text" name="name" class="form-control" required="required">
                         </div>
                         <div class="form-group">
@@ -81,17 +73,13 @@
                             <input type="email" name="email" class="form-control" required="required">
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
+                            <label>Téléphone</label>
                             <input type="number" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Company Name</label>
-                            <input type="text" class="form-control">
-                        </div>                        
+                        </div>         
                     </div>
                     <div class="col-sm-5">
                         <div class="form-group">
-                            <label>Subject *</label>
+                            <label>Sujet *</label>
                             <input type="text" name="subject" class="form-control" required="required">
                         </div>
                         <div class="form-group">
@@ -99,7 +87,7 @@
                             <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
                         </div>                        
                         <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
+                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Envoyer un message</button>
                         </div>
                     </div>
                 </form> 
@@ -112,9 +100,9 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
-                        <h3>Company</h3>
+                        <h3>Entreprise</h3>
                         <ul>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="#">à Propos</a></li>
                             <li><a href="#">We are hiring</a></li>
                             <li><a href="#">Meet the team</a></li>
                             <li><a href="#">Copyright</a></li>
@@ -157,15 +145,13 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="widget">
-                        <h3>Our Partners</h3>
+                        <h3>Nos partenaires</h3>
                         <ul>
-                            <li><a href="#">Adipisicing Elit</a></li>
-                            <li><a href="#">Eiusmod</a></li>
-                            <li><a href="#">Tempor</a></li>
-                            <li><a href="#">Veniam</a></li>
-                            <li><a href="#">Exercitation</a></li>
-                            <li><a href="#">Ullamco</a></li>
-                            <li><a href="#">Laboris</a></li>
+                            <li><a href="http://www.total.fr/">Total</a></li>
+                            <li><a href="https://www.renault.fr/">Renault</a></li>
+                            <li><a href="http://www.dell.fr/">DELL</a></li>
+                            <li><a href="https://www.univ-paris5.fr/">Université Descartes</a></li>
+                            <li><a href="http://www.michelin.fr/">Michelin</a></li>
                         </ul>
                     </div>    
                 </div><!--/.col-md-3-->

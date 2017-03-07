@@ -19,8 +19,8 @@ class __TwigTemplate_44d98fde8d0f515ee5bf39cfc9b3c1eb233a88efacd9462a3ea5fd14d08
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d1430b5572cdfb72c76751c5d73a23f3d6f60049c25c1e0b18b19b94fb3c3b97 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d1430b5572cdfb72c76751c5d73a23f3d6f60049c25c1e0b18b19b94fb3c3b97->enter($__internal_d1430b5572cdfb72c76751c5d73a23f3d6f60049c25c1e0b18b19b94fb3c3b97_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::layout/layout.html.twig"));
+        $__internal_cca2bd3f89fe428b30f8071e1f7abd244528b0a713d1b0e6a5dbe08f09bf38fc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cca2bd3f89fe428b30f8071e1f7abd244528b0a713d1b0e6a5dbe08f09bf38fc->enter($__internal_cca2bd3f89fe428b30f8071e1f7abd244528b0a713d1b0e6a5dbe08f09bf38fc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "::layout/layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -41,32 +41,7 @@ class __TwigTemplate_44d98fde8d0f515ee5bf39cfc9b3c1eb233a88efacd9462a3ea5fd14d08
     </head>
     <body>
         <header id=\"header\">
-            <div class=\"top-bar\">
-                <div class=\"container\">
-                    <div class=\"row\">
-                        <div class=\"col-sm-6 col-xs-4\">
-                            <div class=\"top-number\"><p><i class=\"fa fa-phone-square\"></i>  01 02 03 04 05</p></div>
-                        </div>
-                        <div class=\"col-sm-6 col-xs-8\">
-                            <div class=\"social\">
-                                <ul class=\"social-share\">
-                                    <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-                                    <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-                                    <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li> 
-                                    <li><a href=\"#\"><i class=\"fa fa-dribbble\"></i></a></li>
-                                    <li><a href=\"#\"><i class=\"fa fa-skype\"></i></a></li>
-                                </ul>
-                                <div class=\"search\">
-                                    <form role=\"form\">
-                                        <input type=\"text\" class=\"search-form\" autocomplete=\"off\" placeholder=\"Search\">
-                                        <i class=\"fa fa-search\"></i>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.container-->
-            </div><!--/.top-bar-->
+
 
             <nav class=\"navbar navbar-inverse\" role=\"banner\">
                 <div class=\"container\">
@@ -78,7 +53,7 @@ class __TwigTemplate_44d98fde8d0f515ee5bf39cfc9b3c1eb233a88efacd9462a3ea5fd14d08
                             <span class=\"icon-bar\"></span>
                         </button>
                         <a class=\"navbar-brand\" href=\"";
-        // line 54
+        // line 29
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_homepage");
         echo "\"><img src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/logo.png"), "html", null, true);
@@ -88,116 +63,113 @@ class __TwigTemplate_44d98fde8d0f515ee5bf39cfc9b3c1eb233a88efacd9462a3ea5fd14d08
                     <div class=\"collapse navbar-collapse navbar-right\">
                         <ul class=\"nav navbar-nav\">
                             <li class=\"active\"><a href=\"";
-        // line 59
+        // line 34
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_homepage");
         echo "\">Accueil</a></li>
                             <li><a href=\"";
-        // line 60
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("about-us.html"), "html", null, true);
-        echo "\">Infos</a></li>
-                            <li><a href=\"";
-        // line 61
+        // line 35
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_services");
         echo "\">Services</a></li>
                             <li><a href=\"";
-        // line 62
+        // line 36
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_tarifs");
         echo "\">Tarifs</a></li>
                             <li><a href=\"";
-        // line 63
+        // line 37
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_contact");
         echo "\">Contact</a></li>  
                             <li><a href=\"";
-        // line 64
+        // line 38
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_inscription");
         echo "\">Inscription</a></li> 
+                            <li><a href=\"";
+        // line 39
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("about-us.html"), "html", null, true);
+        echo "\">Connexion</a></li>
                         </ul>
                     </div>
                 </div><!--/.container-->
             </nav><!--/nav-->
         </header><!--/header-->
-        ";
-        // line 70
+    ";
+        // line 45
         $this->displayBlock('body', $context, $blocks);
-        // line 71
-        echo "        
-        <footer id=\"footer\" class=\"midnight-blue\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-sm-6\">
-                        &copy; 2013 <a target=\"_blank\" href=\"";
-        // line 76
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("http://shapebootstrap.net/"), "html", null, true);
-        echo "\" title=\"Free Twitter Bootstrap WordPress Themes and HTML templates\">ShapeBootstrap</a>. All Rights Reserved.
-                    </div>
-                    <div class=\"col-sm-6\">
-                        <ul class=\"pull-right\">
-                            <li><a href=\"";
-        // line 80
+        // line 46
+        echo "
+    <footer id=\"footer\" class=\"midnight-blue\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-sm-6\">
+                    Site réalisé par Julien Gallart, Melvin Fourniaud & Thibault Guerin.
+                </div>
+                <div class=\"col-sm-6\">
+                    <ul class=\"pull-right\">
+                        <li><a href=\"";
+        // line 55
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_homepage");
         echo "\">Acceuil</a></li>
-                            <li><a href=\"#\">Infos</a></li>
-                            <li><a href=\"#\">Nous contacter</a></li>
-                        </ul>
-                    </div>
+                        <li><a href=\"#\">Infos</a></li>
+                        <li><a href=\"#\">Nous contacter</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer><!--/#footer-->
+        </div>
+    </footer><!--/#footer-->
 
-        <script src=\"";
-        // line 89
+    <script src=\"";
+        // line 64
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
-        <script src=\"";
-        // line 90
+    <script src=\"";
+        // line 65
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
-        <script src=\"";
-        // line 91
+    <script src=\"";
+        // line 66
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.prettyPhoto.js"), "html", null, true);
         echo "\"></script>
-        <script src=\"";
-        // line 92
+    <script src=\"";
+        // line 67
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/jquery.isotope.min.js"), "html", null, true);
         echo "\"></script>
-        <script src=\"";
-        // line 93
+    <script src=\"";
+        // line 68
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
-        <script src=\"";
-        // line 94
+    <script src=\"";
+        // line 69
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/wow.min.js"), "html", null, true);
         echo "\"></script>
-        
-        ";
-        // line 96
+
+";
+        // line 71
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 97
-        echo "    </body>
+        // line 72
+        echo "</body>
 </html>
 ";
         
-        $__internal_d1430b5572cdfb72c76751c5d73a23f3d6f60049c25c1e0b18b19b94fb3c3b97->leave($__internal_d1430b5572cdfb72c76751c5d73a23f3d6f60049c25c1e0b18b19b94fb3c3b97_prof);
+        $__internal_cca2bd3f89fe428b30f8071e1f7abd244528b0a713d1b0e6a5dbe08f09bf38fc->leave($__internal_cca2bd3f89fe428b30f8071e1f7abd244528b0a713d1b0e6a5dbe08f09bf38fc_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_4a6f64a02d5194b2303b0c48ad953d033bdc28d1a13a749c1bb914ae34d75c11 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4a6f64a02d5194b2303b0c48ad953d033bdc28d1a13a749c1bb914ae34d75c11->enter($__internal_4a6f64a02d5194b2303b0c48ad953d033bdc28d1a13a749c1bb914ae34d75c11_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_f8cb07504f5f8a32e58e4aa7b307671bb8640f760731252bc29abc950f4bb2c9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f8cb07504f5f8a32e58e4aa7b307671bb8640f760731252bc29abc950f4bb2c9->enter($__internal_f8cb07504f5f8a32e58e4aa7b307671bb8640f760731252bc29abc950f4bb2c9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Welcome!";
         
-        $__internal_4a6f64a02d5194b2303b0c48ad953d033bdc28d1a13a749c1bb914ae34d75c11->leave($__internal_4a6f64a02d5194b2303b0c48ad953d033bdc28d1a13a749c1bb914ae34d75c11_prof);
+        $__internal_f8cb07504f5f8a32e58e4aa7b307671bb8640f760731252bc29abc950f4bb2c9->leave($__internal_f8cb07504f5f8a32e58e4aa7b307671bb8640f760731252bc29abc950f4bb2c9_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_2d68e1ebc02d824980b9c280ee32cd56af228d6bce4d863331768b7002bc16ff = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2d68e1ebc02d824980b9c280ee32cd56af228d6bce4d863331768b7002bc16ff->enter($__internal_2d68e1ebc02d824980b9c280ee32cd56af228d6bce4d863331768b7002bc16ff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_9067df15f34e515a0abe4a78015cbc5f12d13f678272ecb2d5e267bc46f58e4a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9067df15f34e515a0abe4a78015cbc5f12d13f678272ecb2d5e267bc46f58e4a->enter($__internal_9067df15f34e515a0abe4a78015cbc5f12d13f678272ecb2d5e267bc46f58e4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 7
         echo "            <link href=\"";
@@ -225,29 +197,29 @@ class __TwigTemplate_44d98fde8d0f515ee5bf39cfc9b3c1eb233a88efacd9462a3ea5fd14d08
         echo "\" rel=\"stylesheet\">  
         ";
         
-        $__internal_2d68e1ebc02d824980b9c280ee32cd56af228d6bce4d863331768b7002bc16ff->leave($__internal_2d68e1ebc02d824980b9c280ee32cd56af228d6bce4d863331768b7002bc16ff_prof);
+        $__internal_9067df15f34e515a0abe4a78015cbc5f12d13f678272ecb2d5e267bc46f58e4a->leave($__internal_9067df15f34e515a0abe4a78015cbc5f12d13f678272ecb2d5e267bc46f58e4a_prof);
 
     }
 
-    // line 70
+    // line 45
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1e5b5ce0e0c27912d5277257a52afc9a4c079b45caa71babfda519d4254987cf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1e5b5ce0e0c27912d5277257a52afc9a4c079b45caa71babfda519d4254987cf->enter($__internal_1e5b5ce0e0c27912d5277257a52afc9a4c079b45caa71babfda519d4254987cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1d3c9c3a7ce0a28fea3791f5f63a1f992c19ece3b08690d7886e847357f0a841 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1d3c9c3a7ce0a28fea3791f5f63a1f992c19ece3b08690d7886e847357f0a841->enter($__internal_1d3c9c3a7ce0a28fea3791f5f63a1f992c19ece3b08690d7886e847357f0a841_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_1e5b5ce0e0c27912d5277257a52afc9a4c079b45caa71babfda519d4254987cf->leave($__internal_1e5b5ce0e0c27912d5277257a52afc9a4c079b45caa71babfda519d4254987cf_prof);
+        $__internal_1d3c9c3a7ce0a28fea3791f5f63a1f992c19ece3b08690d7886e847357f0a841->leave($__internal_1d3c9c3a7ce0a28fea3791f5f63a1f992c19ece3b08690d7886e847357f0a841_prof);
 
     }
 
-    // line 96
+    // line 71
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_fd591b85fdfad883b88f6154816acb34ec9dce4bcb9f98bc317cdc76d275fe57 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fd591b85fdfad883b88f6154816acb34ec9dce4bcb9f98bc317cdc76d275fe57->enter($__internal_fd591b85fdfad883b88f6154816acb34ec9dce4bcb9f98bc317cdc76d275fe57_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_5f2f1ba480ec4fb3af125035db07deee120195b057aa36365abf6b7aed4a9880 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5f2f1ba480ec4fb3af125035db07deee120195b057aa36365abf6b7aed4a9880->enter($__internal_5f2f1ba480ec4fb3af125035db07deee120195b057aa36365abf6b7aed4a9880_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_fd591b85fdfad883b88f6154816acb34ec9dce4bcb9f98bc317cdc76d275fe57->leave($__internal_fd591b85fdfad883b88f6154816acb34ec9dce4bcb9f98bc317cdc76d275fe57_prof);
+        $__internal_5f2f1ba480ec4fb3af125035db07deee120195b057aa36365abf6b7aed4a9880->leave($__internal_5f2f1ba480ec4fb3af125035db07deee120195b057aa36365abf6b7aed4a9880_prof);
 
     }
 
@@ -263,7 +235,7 @@ class __TwigTemplate_44d98fde8d0f515ee5bf39cfc9b3c1eb233a88efacd9462a3ea5fd14d08
 
     public function getDebugInfo()
     {
-        return array (  244 => 96,  233 => 70,  224 => 12,  220 => 11,  216 => 10,  212 => 9,  208 => 8,  203 => 7,  197 => 6,  185 => 5,  176 => 97,  174 => 96,  169 => 94,  165 => 93,  161 => 92,  157 => 91,  153 => 90,  149 => 89,  137 => 80,  130 => 76,  123 => 71,  121 => 70,  112 => 64,  108 => 63,  104 => 62,  100 => 61,  96 => 60,  92 => 59,  82 => 54,  38 => 14,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  216 => 71,  205 => 45,  196 => 12,  192 => 11,  188 => 10,  184 => 9,  180 => 8,  175 => 7,  169 => 6,  157 => 5,  148 => 72,  146 => 71,  141 => 69,  137 => 68,  133 => 67,  129 => 66,  125 => 65,  121 => 64,  109 => 55,  98 => 46,  96 => 45,  87 => 39,  83 => 38,  79 => 37,  75 => 36,  71 => 35,  67 => 34,  57 => 29,  38 => 14,  36 => 6,  32 => 5,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -293,32 +265,7 @@ class __TwigTemplate_44d98fde8d0f515ee5bf39cfc9b3c1eb233a88efacd9462a3ea5fd14d08
     </head>
     <body>
         <header id=\"header\">
-            <div class=\"top-bar\">
-                <div class=\"container\">
-                    <div class=\"row\">
-                        <div class=\"col-sm-6 col-xs-4\">
-                            <div class=\"top-number\"><p><i class=\"fa fa-phone-square\"></i>  01 02 03 04 05</p></div>
-                        </div>
-                        <div class=\"col-sm-6 col-xs-8\">
-                            <div class=\"social\">
-                                <ul class=\"social-share\">
-                                    <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-                                    <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-                                    <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li> 
-                                    <li><a href=\"#\"><i class=\"fa fa-dribbble\"></i></a></li>
-                                    <li><a href=\"#\"><i class=\"fa fa-skype\"></i></a></li>
-                                </ul>
-                                <div class=\"search\">
-                                    <form role=\"form\">
-                                        <input type=\"text\" class=\"search-form\" autocomplete=\"off\" placeholder=\"Search\">
-                                        <i class=\"fa fa-search\"></i>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.container-->
-            </div><!--/.top-bar-->
+
 
             <nav class=\"navbar navbar-inverse\" role=\"banner\">
                 <div class=\"container\">
@@ -335,44 +282,44 @@ class __TwigTemplate_44d98fde8d0f515ee5bf39cfc9b3c1eb233a88efacd9462a3ea5fd14d08
                     <div class=\"collapse navbar-collapse navbar-right\">
                         <ul class=\"nav navbar-nav\">
                             <li class=\"active\"><a href=\"{{ path ('permisfute_homepage') }}\">Accueil</a></li>
-                            <li><a href=\"{{ asset (\"about-us.html\") }}\">Infos</a></li>
                             <li><a href=\"{{ path ('permisfute_services') }}\">Services</a></li>
                             <li><a href=\"{{ path ('permisfute_tarifs') }}\">Tarifs</a></li>
                             <li><a href=\"{{ path ('permisfute_contact') }}\">Contact</a></li>  
                             <li><a href=\"{{ path ('permisfute_inscription') }}\">Inscription</a></li> 
+                            <li><a href=\"{{ asset (\"about-us.html\") }}\">Connexion</a></li>
                         </ul>
                     </div>
                 </div><!--/.container-->
             </nav><!--/nav-->
         </header><!--/header-->
-        {% block body %}{% endblock %}
-        
-        <footer id=\"footer\" class=\"midnight-blue\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-sm-6\">
-                        &copy; 2013 <a target=\"_blank\" href=\"{{asset (\"http://shapebootstrap.net/\") }}\" title=\"Free Twitter Bootstrap WordPress Themes and HTML templates\">ShapeBootstrap</a>. All Rights Reserved.
-                    </div>
-                    <div class=\"col-sm-6\">
-                        <ul class=\"pull-right\">
-                            <li><a href=\"{{ path ('permisfute_homepage') }}\">Acceuil</a></li>
-                            <li><a href=\"#\">Infos</a></li>
-                            <li><a href=\"#\">Nous contacter</a></li>
-                        </ul>
-                    </div>
+    {% block body %}{% endblock %}
+
+    <footer id=\"footer\" class=\"midnight-blue\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-sm-6\">
+                    Site réalisé par Julien Gallart, Melvin Fourniaud & Thibault Guerin.
+                </div>
+                <div class=\"col-sm-6\">
+                    <ul class=\"pull-right\">
+                        <li><a href=\"{{ path ('permisfute_homepage') }}\">Acceuil</a></li>
+                        <li><a href=\"#\">Infos</a></li>
+                        <li><a href=\"#\">Nous contacter</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer><!--/#footer-->
+        </div>
+    </footer><!--/#footer-->
 
-        <script src=\"{{ asset('js/jquery.js') }}\"></script>
-        <script src=\"{{ asset('js/bootstrap.min.js') }}\"></script>
-        <script src=\"{{ asset('js/jquery.prettyPhoto.js') }}\"></script>
-        <script src=\"{{ asset('js/jquery.isotope.min.js') }}\"></script>
-        <script src=\"{{ asset('js/main.js') }}\"></script>
-        <script src=\"{{ asset('js/wow.min.js') }}\"></script>
-        
-        {% block javascripts %}{% endblock %}
-    </body>
+    <script src=\"{{ asset('js/jquery.js') }}\"></script>
+    <script src=\"{{ asset('js/bootstrap.min.js') }}\"></script>
+    <script src=\"{{ asset('js/jquery.prettyPhoto.js') }}\"></script>
+    <script src=\"{{ asset('js/jquery.isotope.min.js') }}\"></script>
+    <script src=\"{{ asset('js/main.js') }}\"></script>
+    <script src=\"{{ asset('js/wow.min.js') }}\"></script>
+
+{% block javascripts %}{% endblock %}
+</body>
 </html>
 ", "::layout/layout.html.twig", "C:\\wamp\\www\\permisfute\\app/Resources\\views/layout/layout.html.twig");
     }

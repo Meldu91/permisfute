@@ -21,126 +21,83 @@ class __TwigTemplate_913960e56db566591ab368a8e30005795c4efff4fc7d4a71c7af7bba3c9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5a3ce72da596ee1605f55ba6f6f4c622e61c2fff12d322ff4d5df2314139a2d0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5a3ce72da596ee1605f55ba6f6f4c622e61c2fff12d322ff4d5df2314139a2d0->enter($__internal_5a3ce72da596ee1605f55ba6f6f4c622e61c2fff12d322ff4d5df2314139a2d0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:inscription.html.twig"));
+        $__internal_b2e63fa4e6ad04408244abcdf715561f1d90aa8d312992c1135cbfba3e2d8c9b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b2e63fa4e6ad04408244abcdf715561f1d90aa8d312992c1135cbfba3e2d8c9b->enter($__internal_b2e63fa4e6ad04408244abcdf715561f1d90aa8d312992c1135cbfba3e2d8c9b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:inscription.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5a3ce72da596ee1605f55ba6f6f4c622e61c2fff12d322ff4d5df2314139a2d0->leave($__internal_5a3ce72da596ee1605f55ba6f6f4c622e61c2fff12d322ff4d5df2314139a2d0_prof);
+        $__internal_b2e63fa4e6ad04408244abcdf715561f1d90aa8d312992c1135cbfba3e2d8c9b->leave($__internal_b2e63fa4e6ad04408244abcdf715561f1d90aa8d312992c1135cbfba3e2d8c9b_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_758d3f1d60aed60bcf8ed392e5c7ac1daae72a59759791e06dc2c460a2a3eae8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_758d3f1d60aed60bcf8ed392e5c7ac1daae72a59759791e06dc2c460a2a3eae8->enter($__internal_758d3f1d60aed60bcf8ed392e5c7ac1daae72a59759791e06dc2c460a2a3eae8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3e01efc563d1e3365180dd00fd7ec212d944bf6b0af98992a6088d8243369514 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3e01efc563d1e3365180dd00fd7ec212d944bf6b0af98992a6088d8243369514->enter($__internal_3e01efc563d1e3365180dd00fd7ec212d944bf6b0af98992a6088d8243369514_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
-        echo "    
-    <section id=\"contact-info\">
-        <div class=\"center\">                
-            <h2>How to Reach Us?</h2>
-            <p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-        </div>
-        <div class=\"gmap-area\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-sm-5 text-center\">
-                        <div class=\"gmap\">
-                            <iframe frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=JoomShaper,+Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=joomshaper&amp;sll=37.0625,-95.677068&amp;sspn=42.766543,80.332031&amp;ie=UTF8&amp;hq=JoomShaper,&amp;hnear=Dhaka,+Dhaka+Division,+Bangladesh&amp;ll=23.73854,90.385504&amp;spn=0.001515,0.002452&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=1073661719450182870&amp;output=embed\"></iframe>
+        echo "
+    <style>
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #C52D2F;
+            border: 1px solid #000000;
+            color: #FFFFFF;
+            font-size: 15px;
+        }
+
+        .btn:hover, .btn:focus {
+            background: #ccc;
+            text-shadow: 0 -1px #eee;
+        }
+
+        .btn:active {
+            background: #C52D2F;
+            text-shadow: 0 -1px #eee;
+            border: 1px solid #1f6b81;
+        }
+    </style>
+    <section id=\"services\" class=\"service-item\">
+        <div class=\"container\">
+            <div class=\"center wow fadeInDown\">
+                <h2>Vous souhaitez vous inscrire ?</h2>
+                <p class=\"lead\">Pour vous inscrire dans notre école il suffit de choisir votre catégorie</p>
+            </div>
+
+            <div class=\"row\">
+                <center>
+                    <a href=\"";
+        // line 36
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("salarie_user_register");
+        echo "\" class=\"btn\">Vous êtes un salarié</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href=\"";
+        // line 37
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
+        echo "\" class=\"btn\">Vous êtes un étudiant</a>
+                </center>                         
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+    <section id=\"conatcat-info\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-sm-8\">
+                    <div class=\"media contact-info wow fadeInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"600ms\">
+                        <div class=\"pull-left\">
+                            <i class=\"fa fa-phone\"></i>
                         </div>
-                    </div>
-
-                    <div class=\"col-sm-7 map-content\">
-                        <ul class=\"row\">
-                            <li class=\"col-sm-6\">
-                                <address>
-                                    <h5>Head Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zonal Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>                                
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-
-
-                            <li class=\"col-sm-6\">
-                                <address>
-                                    <h5>Zone#2 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zone#3 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-                        </ul>
+                        <div class=\"media-body\">
+                            <h2>Avez-vous une question ?</h2>
+                            <p>Nous restons à votre disposition si vous avez une question, entre 8h et 20h par mail PermisFute@gmail.fr ou par téléphone au 01 23 56 70 80</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>  <!--/gmap_area -->
-
-    <section id=\"contact-page\">
-        <div class=\"container\">
-            <div class=\"center\">        
-                <h2>Drop Your Message</h2>
-                <p class=\"lead\">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div> 
-            <div class=\"row contact-wrap\"> 
-                <div class=\"status alert alert-success\" style=\"display: none\"></div>
-                <form id=\"main-contact-form\" class=\"contact-form\" name=\"contact-form\" method=\"post\" action=\"sendemail.php\">
-                    <div class=\"col-sm-5 col-sm-offset-1\">
-                        <div class=\"form-group\">
-                            <label>Name *</label>
-                            <input type=\"text\" name=\"name\" class=\"form-control\" required=\"required\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Email *</label>
-                            <input type=\"email\" name=\"email\" class=\"form-control\" required=\"required\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Phone</label>
-                            <input type=\"number\" class=\"form-control\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Company Name</label>
-                            <input type=\"text\" class=\"form-control\">
-                        </div>                        
-                    </div>
-                    <div class=\"col-sm-5\">
-                        <div class=\"form-group\">
-                            <label>Subject *</label>
-                            <input type=\"text\" name=\"subject\" class=\"form-control\" required=\"required\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Message *</label>
-                            <textarea name=\"message\" id=\"message\" required=\"required\" class=\"form-control\" rows=\"8\"></textarea>
-                        </div>                        
-                        <div class=\"form-group\">
-                            <button type=\"submit\" name=\"submit\" class=\"btn btn-primary btn-lg\" required=\"required\">Submit Message</button>
-                        </div>
-                    </div>
-                </form> 
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#contact-page-->
+        </div><!--/.container-->    
+    </section><!--/#conatcat-info-->
 
     <section id=\"bottom\">
         <div class=\"container wow fadeInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"600ms\">
@@ -207,10 +164,10 @@ class __TwigTemplate_913960e56db566591ab368a8e30005795c4efff4fc7d4a71c7af7bba3c9
             </div>
         </div>
     </section><!--/#bottom-->
-    
+
 ";
         
-        $__internal_758d3f1d60aed60bcf8ed392e5c7ac1daae72a59759791e06dc2c460a2a3eae8->leave($__internal_758d3f1d60aed60bcf8ed392e5c7ac1daae72a59759791e06dc2c460a2a3eae8_prof);
+        $__internal_3e01efc563d1e3365180dd00fd7ec212d944bf6b0af98992a6088d8243369514->leave($__internal_3e01efc563d1e3365180dd00fd7ec212d944bf6b0af98992a6088d8243369514_prof);
 
     }
 
@@ -226,7 +183,7 @@ class __TwigTemplate_913960e56db566591ab368a8e30005795c4efff4fc7d4a71c7af7bba3c9
 
     public function getDebugInfo()
     {
-        return array (  40 => 5,  34 => 4,  11 => 1,);
+        return array (  77 => 37,  73 => 36,  40 => 5,  34 => 4,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -243,110 +200,61 @@ class __TwigTemplate_913960e56db566591ab368a8e30005795c4efff4fc7d4a71c7af7bba3c9
 
 
 {% block body %}
-    
-    <section id=\"contact-info\">
-        <div class=\"center\">                
-            <h2>How to Reach Us?</h2>
-            <p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-        </div>
-        <div class=\"gmap-area\">
-            <div class=\"container\">
-                <div class=\"row\">
-                    <div class=\"col-sm-5 text-center\">
-                        <div class=\"gmap\">
-                            <iframe frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=JoomShaper,+Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=joomshaper&amp;sll=37.0625,-95.677068&amp;sspn=42.766543,80.332031&amp;ie=UTF8&amp;hq=JoomShaper,&amp;hnear=Dhaka,+Dhaka+Division,+Bangladesh&amp;ll=23.73854,90.385504&amp;spn=0.001515,0.002452&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=1073661719450182870&amp;output=embed\"></iframe>
+
+    <style>
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #C52D2F;
+            border: 1px solid #000000;
+            color: #FFFFFF;
+            font-size: 15px;
+        }
+
+        .btn:hover, .btn:focus {
+            background: #ccc;
+            text-shadow: 0 -1px #eee;
+        }
+
+        .btn:active {
+            background: #C52D2F;
+            text-shadow: 0 -1px #eee;
+            border: 1px solid #1f6b81;
+        }
+    </style>
+    <section id=\"services\" class=\"service-item\">
+        <div class=\"container\">
+            <div class=\"center wow fadeInDown\">
+                <h2>Vous souhaitez vous inscrire ?</h2>
+                <p class=\"lead\">Pour vous inscrire dans notre école il suffit de choisir votre catégorie</p>
+            </div>
+
+            <div class=\"row\">
+                <center>
+                    <a href=\"{{ path ('salarie_user_register') }}\" class=\"btn\">Vous êtes un salarié</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href=\"{{ path ('fos_user_registration_register') }}\" class=\"btn\">Vous êtes un étudiant</a>
+                </center>                         
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+    <section id=\"conatcat-info\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-sm-8\">
+                    <div class=\"media contact-info wow fadeInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"600ms\">
+                        <div class=\"pull-left\">
+                            <i class=\"fa fa-phone\"></i>
                         </div>
-                    </div>
-
-                    <div class=\"col-sm-7 map-content\">
-                        <ul class=\"row\">
-                            <li class=\"col-sm-6\">
-                                <address>
-                                    <h5>Head Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zonal Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>                                
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-
-
-                            <li class=\"col-sm-6\">
-                                <address>
-                                    <h5>Zone#2 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zone#3 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                        Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                        Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-                        </ul>
+                        <div class=\"media-body\">
+                            <h2>Avez-vous une question ?</h2>
+                            <p>Nous restons à votre disposition si vous avez une question, entre 8h et 20h par mail PermisFute@gmail.fr ou par téléphone au 01 23 56 70 80</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>  <!--/gmap_area -->
-
-    <section id=\"contact-page\">
-        <div class=\"container\">
-            <div class=\"center\">        
-                <h2>Drop Your Message</h2>
-                <p class=\"lead\">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div> 
-            <div class=\"row contact-wrap\"> 
-                <div class=\"status alert alert-success\" style=\"display: none\"></div>
-                <form id=\"main-contact-form\" class=\"contact-form\" name=\"contact-form\" method=\"post\" action=\"sendemail.php\">
-                    <div class=\"col-sm-5 col-sm-offset-1\">
-                        <div class=\"form-group\">
-                            <label>Name *</label>
-                            <input type=\"text\" name=\"name\" class=\"form-control\" required=\"required\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Email *</label>
-                            <input type=\"email\" name=\"email\" class=\"form-control\" required=\"required\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Phone</label>
-                            <input type=\"number\" class=\"form-control\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Company Name</label>
-                            <input type=\"text\" class=\"form-control\">
-                        </div>                        
-                    </div>
-                    <div class=\"col-sm-5\">
-                        <div class=\"form-group\">
-                            <label>Subject *</label>
-                            <input type=\"text\" name=\"subject\" class=\"form-control\" required=\"required\">
-                        </div>
-                        <div class=\"form-group\">
-                            <label>Message *</label>
-                            <textarea name=\"message\" id=\"message\" required=\"required\" class=\"form-control\" rows=\"8\"></textarea>
-                        </div>                        
-                        <div class=\"form-group\">
-                            <button type=\"submit\" name=\"submit\" class=\"btn btn-primary btn-lg\" required=\"required\">Submit Message</button>
-                        </div>
-                    </div>
-                </form> 
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#contact-page-->
+        </div><!--/.container-->    
+    </section><!--/#conatcat-info-->
 
     <section id=\"bottom\">
         <div class=\"container wow fadeInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"600ms\">
@@ -413,7 +321,7 @@ class __TwigTemplate_913960e56db566591ab368a8e30005795c4efff4fc7d4a71c7af7bba3c9
             </div>
         </div>
     </section><!--/#bottom-->
-    
+
 {% endblock %}
 ", "PermisfuteBundle:Default:inscription.html.twig", "C:\\wamp64\\www\\permisfute\\src\\Permisfute\\PermisfuteBundle/Resources/views/Default/inscription.html.twig");
     }
