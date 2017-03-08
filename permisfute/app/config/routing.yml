@@ -4,10 +4,14 @@ utilisateurs:
 
 permisfute:
     resource: "@PermisfuteBundle/Resources/config/routing.yml"
-    prefix:   /Permisfute
+    prefix:   /
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    
+fos_user_group:
+    resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+    prefix: /group
 
 app:
     resource: "@AppBundle/Controller/"
@@ -17,3 +21,8 @@ Utilisateurs :
     resource: "@UtilisateursBundle/Controller/"
     type: annotation
     prefix: /
+    
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin

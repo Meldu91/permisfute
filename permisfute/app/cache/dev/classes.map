@@ -83,4 +83,12 @@
   82 => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\HttpCacheListener',
   83 => 'Sensio\\Bundle\\FrameworkExtraBundle\\EventListener\\SecurityListener',
   84 => 'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\ConfigurationAnnotation',
+  85 => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\Configuration\\ConfigManager',
+  86 => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\Event\\EasyAdminEvents',
+  87 => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\EventListener\\ExceptionListener',
+  88 => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\EventListener\\RequestPostInitializeListener',
+  89 => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\Form\\Extension\\EasyAdminExtension',
+  90 => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\Search\\Paginator',
+  91 => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\Search\\QueryBuilder',
+  92 => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\Twig\\EasyAdminTwigExtension',
 );

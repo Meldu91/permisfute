@@ -31,12 +31,49 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
-    
+ 
+ 
+# EASY ADMIN CONFIG   
+
+easy_admin:
+    site_name: 'Espace <em style="font-size: 80%;"> Admin. </em>'
+    design:
+        brand_color: '#C52D2F'
+        menu: 
+            - { label: 'Retour Acceuil', route: 'permisfute_homepage' }
+            - { label: 'Inventaire' }
+            - Lecon
+            - Voiture
+            - { label: 'Utilisateurs' }
+            - User          
+            
+    entities:
+        User:
+            class: Utilisateurs\UtilisateursBundle\Entity\Utilisateurs
+            form:
+                fields:
+                    - username
+                    - email 
+                    - enabled
+                    - lastlogin
+                    # if administrators are allowed to edit users' passwords and roles, add this:
+                    - { property: 'plainPassword', type: 'text', type_options: { required: false } }
+                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'ROLE_USER': 'ROLE_USER', 'ROLE_ADMIN': 'ROLE_ADMIN' } } }
+        Voiture:
+            class: Permisfute\PermisfuteBundle\Entity\Voiture
+        
+        Lecon:
+             class: Permisfute\PermisfuteBundle\Entity\Lecon
+            
+            
+      
 # FOS user config
 fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Utilisateurs\UtilisateursBundle\Entity\Utilisateurs
+    group:
+        group_class: Utilisateurs\UtilisateursBundle\Entity\Group
     registration:
             form:
                 type: etudiant_user_registration

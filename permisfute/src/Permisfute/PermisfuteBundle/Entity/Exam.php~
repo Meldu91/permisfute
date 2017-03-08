@@ -1,0 +1,41 @@
+<?php
+
+namespace Permisfute\PermisfuteBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Exam
+ *
+ * @ORM\Table(name="exam")
+ * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\ExamRepository")
+ */
+class Exam
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\type_exam", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    
+    private $type_exam;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

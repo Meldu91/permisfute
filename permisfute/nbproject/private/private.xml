@@ -3,16 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/permisfute/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig</file>
-            <file>file:/C:/wamp/www/permisfute/src/Utilisateurs/UtilisateursBundle/Resources/config/services.yml</file>
-            <file>file:/C:/wamp/www/permisfute/src/Utilisateurs/UtilisateursBundle/Form/SalarieRegistrationType.php</file>
-            <file>file:/C:/wamp/www/permisfute/app/config/security.yml</file>
             <file>file:/C:/wamp/www/permisfute/app/config/config.yml</file>
-            <file>file:/C:/wamp/www/permisfute/app/config/routing.yml</file>
-            <file>file:/C:/wamp/www/permisfute/src/Utilisateurs/UtilisateursBundle/Controller/RegistrationController.php</file>
-            <file>file:/C:/wamp/www/permisfute/app/Resources/FOSUserBundle/views/Registration/register.html.twig</file>
-            <file>file:/C:/wamp/www/permisfute/src/Utilisateurs/UtilisateursBundle/Entity/Utilisateurs.php</file>
-            <file>file:/C:/wamp/www/permisfute/src/Utilisateurs/UtilisateursBundle/Form/EtudiantRegistrationType.php</file>
+            <file>file:/C:/wamp/www/permisfute/src/Permisfute/PermisfuteBundle/Resources/views/Default/inscription.html.twig</file>
+            <file>file:/C:/wamp/www/permisfute/src/Permisfute/PermisfuteBundle/Controller/AdminController.php</file>
         </group>
     </open-files>
 </project-private>

@@ -19,6 +19,7 @@
       <parameter key="PermisfuteBundle">Permisfute\PermisfuteBundle\PermisfuteBundle</parameter>
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="UtilisateursBundle">Utilisateurs\UtilisateursBundle\UtilisateursBundle</parameter>
+      <parameter key="EasyAdminBundle">JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -79,6 +80,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">C:\wamp\www\permisfute\src\Utilisateurs\UtilisateursBundle</parameter>
         <parameter key="namespace">Utilisateurs\UtilisateursBundle</parameter>
+      </parameter>
+      <parameter key="EasyAdminBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle</parameter>
+        <parameter key="namespace">JavierEguiluz\Bundle\EasyAdminBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -595,6 +601,110 @@
       <parameter>ResetPassword</parameter>
       <parameter>Default</parameter>
     </parameter>
+    <parameter key="fos_user.group_manager.class">FOS\UserBundle\Doctrine\GroupManager</parameter>
+    <parameter key="fos_user.model.group.class">Utilisateurs\UtilisateursBundle\Entity\Group</parameter>
+    <parameter key="fos_user.group.form.type">fos_user_group</parameter>
+    <parameter key="fos_user.group.form.name">fos_user_group_form</parameter>
+    <parameter key="fos_user.group.form.validation_groups" type="collection">
+      <parameter>Registration</parameter>
+      <parameter>Default</parameter>
+    </parameter>
+    <parameter key="easyadmin.config" type="collection">
+      <parameter key="site_name">Espace &lt;em style="font-size: 80%;"&gt; Admin. &lt;/em&gt;</parameter>
+      <parameter key="design" type="collection">
+        <parameter key="brand_color">#C52D2F</parameter>
+        <parameter key="menu" type="collection">
+          <parameter type="collection">
+            <parameter key="label">Retour Acceuil</parameter>
+            <parameter key="route">permisfute_homepage</parameter>
+          </parameter>
+          <parameter type="collection">
+            <parameter key="label">Inventaire</parameter>
+          </parameter>
+          <parameter>Lecon</parameter>
+          <parameter>Voiture</parameter>
+          <parameter type="collection">
+            <parameter key="label">Utilisateurs</parameter>
+          </parameter>
+          <parameter>User</parameter>
+        </parameter>
+        <parameter key="theme">default</parameter>
+        <parameter key="color_scheme">dark</parameter>
+        <parameter key="form_theme" type="collection">
+          <parameter>@EasyAdmin/form/bootstrap_3_horizontal_layout.html.twig</parameter>
+        </parameter>
+        <parameter key="assets" type="collection">
+          <parameter key="css" type="collection"/>
+          <parameter key="js" type="collection"/>
+          <parameter key="favicon" type="collection">
+            <parameter key="path">favicon.ico</parameter>
+            <parameter key="mime_type">image/x-icon</parameter>
+          </parameter>
+        </parameter>
+      </parameter>
+      <parameter key="entities" type="collection">
+        <parameter key="User" type="collection">
+          <parameter key="class">Utilisateurs\UtilisateursBundle\Entity\Utilisateurs</parameter>
+          <parameter key="form" type="collection">
+            <parameter key="fields" type="collection">
+              <parameter>username</parameter>
+              <parameter>email</parameter>
+              <parameter>enabled</parameter>
+              <parameter>lastlogin</parameter>
+              <parameter type="collection">
+                <parameter key="property">plainPassword</parameter>
+                <parameter key="type">text</parameter>
+                <parameter key="type_options" type="collection">
+                  <parameter key="required">false</parameter>
+                </parameter>
+              </parameter>
+              <parameter type="collection">
+                <parameter key="property">roles</parameter>
+                <parameter key="type">choice</parameter>
+                <parameter key="type_options" type="collection">
+                  <parameter key="multiple">true</parameter>
+                  <parameter key="choices" type="collection">
+                    <parameter key="ROLE_USER">ROLE_USER</parameter>
+                    <parameter key="ROLE_ADMIN">ROLE_ADMIN</parameter>
+                  </parameter>
+                </parameter>
+              </parameter>
+            </parameter>
+          </parameter>
+          <parameter key="name">User</parameter>
+        </parameter>
+        <parameter key="Voiture" type="collection">
+          <parameter key="class">Permisfute\PermisfuteBundle\Entity\Voiture</parameter>
+          <parameter key="name">Voiture</parameter>
+        </parameter>
+        <parameter key="Lecon" type="collection">
+          <parameter key="class">Permisfute\PermisfuteBundle\Entity\Lecon</parameter>
+          <parameter key="name">Lecon</parameter>
+        </parameter>
+      </parameter>
+      <parameter key="formats" type="collection">
+        <parameter key="date">Y-m-d</parameter>
+        <parameter key="time">H:i:s</parameter>
+        <parameter key="datetime">F j, Y H:i</parameter>
+      </parameter>
+      <parameter key="disabled_actions" type="collection"/>
+      <parameter key="translation_domain">messages</parameter>
+      <parameter key="list" type="collection">
+        <parameter key="actions" type="collection"/>
+        <parameter key="max_results">15</parameter>
+      </parameter>
+      <parameter key="edit" type="collection">
+        <parameter key="actions" type="collection"/>
+      </parameter>
+      <parameter key="new" type="collection">
+        <parameter key="actions" type="collection"/>
+      </parameter>
+      <parameter key="show" type="collection">
+        <parameter key="actions" type="collection"/>
+        <parameter key="max_results">10</parameter>
+      </parameter>
+    </parameter>
+    <parameter key="easyadmin.cache.dir">C:\wamp\www\permisfute\app\cache\dev/easy_admin</parameter>
     <parameter key="web_profiler.controller.profiler.class">Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController</parameter>
     <parameter key="web_profiler.controller.router.class">Symfony\Bundle\WebProfilerBundle\Controller\RouterController</parameter>
     <parameter key="web_profiler.controller.exception.class">Symfony\Bundle\WebProfilerBundle\Controller\ExceptionController</parameter>
@@ -664,6 +774,10 @@
         <parameter>dump</parameter>
         <parameter>@Debug/Profiler/dump.html.twig</parameter>
       </parameter>
+      <parameter key="easyadmin.data_collector" type="collection">
+        <parameter>easyadmin</parameter>
+        <parameter>@EasyAdmin/data_collector/easyadmin.html.twig</parameter>
+      </parameter>
       <parameter key="data_collector.config" type="collection">
         <parameter>config</parameter>
         <parameter>@WebProfiler/Collector/config.html.twig</parameter>
@@ -680,6 +794,12 @@
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
+    </service>
+    <service id="controller_resolver" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver" public="false">
+      <tag name="monolog.logger" channel="request"/>
+      <argument type="service" id="service_container"/>
+      <argument type="service" id="controller_name_converter"/>
+      <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
     </service>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
       <tag name="kernel.event_subscriber"/>
@@ -769,6 +889,12 @@
           <service class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer" public="false">
             <tag name="kernel.cache_warmer"/>
             <argument type="service" id="doctrine"/>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="JavierEguiluz\Bundle\EasyAdminBundle\Cache\ConfigWarmer" public="false">
+            <tag name="kernel.cache_warmer" priority="-2048"/>
+            <argument type="service" id="easyadmin.config.manager"/>
           </service>
         </argument>
       </argument>
@@ -924,6 +1050,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ar.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ar.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ar.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.ar.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.ar.xlf</argument>
           </argument>
           <argument key="az" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.az.xlf</argument>
@@ -936,6 +1064,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.bg.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.bg.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.bg.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.bg.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.bg.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ca.xlf</argument>
@@ -943,6 +1073,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ca.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ca.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ca.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.ca.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.ca.xlf</argument>
           </argument>
           <argument key="cs" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cs.xlf</argument>
@@ -950,6 +1082,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.cs.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.cs.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.cs.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.cs.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.cs.xlf</argument>
           </argument>
           <argument key="cy" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.cy.xlf</argument>
@@ -967,6 +1101,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.de.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.de.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.de.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.de.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.de.xlf</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.el.xlf</argument>
@@ -981,6 +1117,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.en.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.en.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.en.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.en.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.en.xlf</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.es.xlf</argument>
@@ -988,6 +1126,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.es.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.es.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.es.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.es.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.es.xlf</argument>
           </argument>
           <argument key="et" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.et.xlf</argument>
@@ -999,6 +1139,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.eu.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.eu.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.eu.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.eu.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.eu.xlf</argument>
           </argument>
           <argument key="fa" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fa.xlf</argument>
@@ -1012,6 +1154,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.fi.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fi.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fi.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.fi.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.fi.xlf</argument>
           </argument>
           <argument key="fr" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.fr.xlf</argument>
@@ -1019,6 +1163,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.fr.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.fr.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.fr.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.fr.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.gl.xlf</argument>
@@ -1063,6 +1209,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.it.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.it.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.it.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.it.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.it.xlf</argument>
           </argument>
           <argument key="ja" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ja.xlf</argument>
@@ -1101,6 +1249,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.nl.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.nl.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.nl.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.nl.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.nl.xlf</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.nn.xlf</argument>
@@ -1116,12 +1266,16 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.pl.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pl.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pl.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.pl.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.pl.xlf</argument>
           </argument>
           <argument key="pt" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Form/Resources/translations\validators.pt.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.pt.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.pt.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.pt.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.pt_BR.xlf</argument>
@@ -1136,6 +1290,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ro.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ro.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ro.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.ro.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.ro.xlf</argument>
           </argument>
           <argument key="ru" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.ru.xlf</argument>
@@ -1143,6 +1299,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.ru.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.ru.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.ru.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.ru.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.ru.xlf</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sk.xlf</argument>
@@ -1157,6 +1315,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sl.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sl.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sl.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.sl.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.sl.xlf</argument>
           </argument>
           <argument key="sq" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.sq.xlf</argument>
@@ -1179,6 +1339,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.sv.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.sv.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.sv.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.sv.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.th.xlf</argument>
@@ -1191,6 +1353,8 @@
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Security\Core/Resources/translations\security.tr.xlf</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\FOSUserBundle.tr.yml</argument>
             <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/translations\validators.tr.yml</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\EasyAdminBundle.tr.xlf</argument>
+            <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/translations\messages.tr.xlf</argument>
           </argument>
           <argument key="uk" type="collection">
             <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Component\Validator/Resources/translations\validators.uk.xlf</argument>
@@ -1532,6 +1696,18 @@
               <argument key="FOS\UserBundle\Form\Type\ChangePasswordFormType">fos_user.change_password.form.type</argument>
               <argument key="fos_user_resetting">fos_user.resetting.form.type</argument>
               <argument key="FOS\UserBundle\Form\Type\ResettingFormType">fos_user.resetting.form.type</argument>
+              <argument key="fos_user_group">fos_user.group.form.type</argument>
+              <argument key="FOS\UserBundle\Form\Type\GroupFormType">fos_user.group.form.type</argument>
+              <argument key="easyadmin.form.type">easyadmin.form.type</argument>
+              <argument key="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType">easyadmin.form.type</argument>
+              <argument key="easyadmin_autocomplete">easyadmin.form.type.autocomplete</argument>
+              <argument key="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType">easyadmin.form.type.autocomplete</argument>
+              <argument key="easyadmin_divider">easyadmin.form.type.divider</argument>
+              <argument key="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType">easyadmin.form.type.divider</argument>
+              <argument key="easyadmin_section">easyadmin.form.type.section</argument>
+              <argument key="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType">easyadmin.form.type.section</argument>
+              <argument key="easyadmin_group">easyadmin.form.type.group</argument>
+              <argument key="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType">easyadmin.form.type.group</argument>
             </argument>
             <argument type="collection">
               <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="collection">
@@ -1540,6 +1716,7 @@
                 <argument>form.type_extension.upload.validator</argument>
                 <argument>form.type_extension.csrf</argument>
                 <argument>form.type_extension.form.data_collector</argument>
+                <argument>easyadmin.form.type.extension</argument>
               </argument>
               <argument key="Symfony\Component\Form\Extension\Core\Type\RepeatedType" type="collection">
                 <argument>form.type_extension.repeated.validator</argument>
@@ -1932,6 +2109,14 @@
       </call>
       <call method="add">
         <argument type="service">
+          <service class="JavierEguiluz\Bundle\EasyAdminBundle\DataCollector\EasyAdminDataCollector" public="false">
+            <tag name="data_collector" template="@EasyAdmin/data_collector/easyadmin.html.twig" id="easyadmin"/>
+            <argument type="service" id="easyadmin.config.manager"/>
+          </service>
+        </argument>
+      </call>
+      <call method="add">
+        <argument type="service">
           <service class="Symfony\Component\HttpKernel\DataCollector\ConfigDataCollector" public="false">
             <tag name="data_collector" template="@WebProfiler/Collector/config.html.twig" id="config" priority="-255"/>
             <call method="setKernel">
@@ -2097,6 +2282,22 @@
         </argument>
         <argument>0</argument>
       </call>
+      <call method="addListenerService">
+        <argument>kernel.controller</argument>
+        <argument type="collection">
+          <argument>easyadmin.listener.controller</argument>
+          <argument>onKernelController</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListenerService">
+        <argument>easy_admin.post_initialize</argument>
+        <argument type="collection">
+          <argument>easyadmin.listener.request_post_initialize</argument>
+          <argument>initializeRequest</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
       <call method="addSubscriberService">
         <argument>response_listener</argument>
         <argument>Symfony\Component\HttpKernel\EventListener\ResponseListener</argument>
@@ -2211,14 +2412,7 @@
       </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
-      <argument type="service">
-        <service class="Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver" public="false">
-          <tag name="monolog.logger" channel="request"/>
-          <argument type="service" id="service_container"/>
-          <argument type="service" id="controller_name_converter"/>
-          <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-        </service>
-      </argument>
+      <argument type="service" id="controller_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
     <service id="security.context" class="Symfony\Component\Security\Core\SecurityContext">
@@ -2246,7 +2440,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>58b2ce764cca77.79877602</argument>
+            <argument>58c0435e53f895.41243999</argument>
           </service>
         </argument>
       </argument>
@@ -2551,7 +2745,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>58b2ce764cca77.79877602</argument>
+            <argument>58c0435e53f895.41243999</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2827,6 +3021,16 @@
         <argument type="service">
           <service class="Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension" public="false">
             <tag name="twig.extension"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addExtension">
+        <argument type="service">
+          <service class="JavierEguiluz\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension" public="false">
+            <tag name="twig.extension"/>
+            <argument type="service" id="easyadmin.config.manager"/>
+            <argument type="service" id="property_accessor"/>
+            <argument>true</argument>
           </service>
         </argument>
       </call>
@@ -3186,6 +3390,10 @@
       <argument type="service" id="security.token_storage" on-invalid="null"/>
       <argument type="service" id="security.authorization_checker" on-invalid="null"/>
     </service>
+    <service id="fos_user.entity_manager" class="Doctrine\ORM\EntityManager" public="false">
+      <argument>null</argument>
+      <factory service="doctrine" method="getManager"/>
+    </service>
     <service id="fos_user.security.interactive_login_listener" class="FOS\UserBundle\EventListener\LastLoginListener">
       <tag name="kernel.event_subscriber"/>
       <argument type="service" id="fos_user.user_manager"/>
@@ -3277,6 +3485,113 @@
       <argument type="service" id="router"/>
       <argument>86400</argument>
     </service>
+    <service id="fos_user.group.form.factory" class="FOS\UserBundle\Form\Factory\FormFactory">
+      <argument type="service" id="form.factory"/>
+      <argument>fos_user_group_form</argument>
+      <argument>fos_user_group</argument>
+      <argument type="collection">
+        <argument>Registration</argument>
+        <argument>Default</argument>
+      </argument>
+    </service>
+    <service id="fos_user.group.form.type" class="FOS\UserBundle\Form\Type\GroupFormType">
+      <tag name="form.type" alias="fos_user_group"/>
+      <argument>Utilisateurs\UtilisateursBundle\Entity\Group</argument>
+    </service>
+    <service id="easyadmin.cache.manager" class="JavierEguiluz\Bundle\EasyAdminBundle\Cache\CacheManager">
+      <argument>C:\wamp\www\permisfute\app\cache\dev/easy_admin</argument>
+    </service>
+    <service id="easyadmin.config.manager" class="JavierEguiluz\Bundle\EasyAdminBundle\Configuration\ConfigManager">
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="easyadmin.query_builder" class="JavierEguiluz\Bundle\EasyAdminBundle\Search\QueryBuilder">
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="easyadmin.autocomplete" class="JavierEguiluz\Bundle\EasyAdminBundle\Search\Autocomplete">
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service">
+        <service class="JavierEguiluz\Bundle\EasyAdminBundle\Search\Finder" public="false">
+          <argument type="service" id="easyadmin.query_builder"/>
+          <argument type="service" id="easyadmin.paginator"/>
+        </service>
+      </argument>
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="easyadmin.paginator" class="JavierEguiluz\Bundle\EasyAdminBundle\Search\Paginator"/>
+    <service id="easyadmin.listener.controller" class="JavierEguiluz\Bundle\EasyAdminBundle\EventListener\ControllerListener">
+      <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="service" id="controller_resolver"/>
+    </service>
+    <service id="easyadmin.listener.request_post_initialize" class="JavierEguiluz\Bundle\EasyAdminBundle\EventListener\RequestPostInitializeListener">
+      <tag name="kernel.event_listener" event="easy_admin.post_initialize" method="initializeRequest"/>
+      <argument type="service" id="doctrine"/>
+      <argument type="service" id="request_stack" on-invalid="null"/>
+    </service>
+    <service id="easyadmin.form.type" class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminFormType">
+      <tag name="form.type"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+      <argument type="collection">
+        <argument key="4" type="service">
+          <service class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\Configurator\AutocompleteTypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="30"/>
+          </service>
+        </argument>
+        <argument key="3" type="service">
+          <service class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\Configurator\CollectionTypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="20"/>
+          </service>
+        </argument>
+        <argument key="2" type="service">
+          <service class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\Configurator\CheckboxTypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="10"/>
+          </service>
+        </argument>
+        <argument key="1" type="service">
+          <service class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\Configurator\RequiredOptionConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="-10"/>
+            <argument type="service">
+              <service class="Symfony\Component\Form\FormTypeGuesserChain" public="false">
+                <argument type="collection">
+                  <argument type="service" id="form.type_guesser.validator"/>
+                  <argument type="service" id="form.type_guesser.doctrine"/>
+                </argument>
+              </service>
+            </argument>
+          </service>
+        </argument>
+        <argument key="0" type="service">
+          <service class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\Configurator\EntityTypeConfigurator" public="false">
+            <tag name="easyadmin.form.type.configurator" priority="-20"/>
+            <argument type="service">
+              <service class="Symfony\Component\Form\FormTypeGuesserChain" public="false">
+                <argument type="collection">
+                  <argument type="service" id="form.type_guesser.validator"/>
+                  <argument type="service" id="form.type_guesser.doctrine"/>
+                </argument>
+              </service>
+            </argument>
+          </service>
+        </argument>
+      </argument>
+    </service>
+    <service id="easyadmin.form.type.autocomplete" class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminAutocompleteType">
+      <tag name="form.type" alias="easyadmin_autocomplete"/>
+      <argument type="service" id="easyadmin.config.manager"/>
+    </service>
+    <service id="easyadmin.form.type.divider" class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminDividerType">
+      <tag name="form.type" alias="easyadmin_divider"/>
+    </service>
+    <service id="easyadmin.form.type.section" class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminSectionType">
+      <tag name="form.type" alias="easyadmin_section"/>
+    </service>
+    <service id="easyadmin.form.type.group" class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Type\EasyAdminGroupType">
+      <tag name="form.type" alias="easyadmin_group"/>
+    </service>
+    <service id="easyadmin.form.type.extension" class="JavierEguiluz\Bundle\EasyAdminBundle\Form\Extension\EasyAdminExtension">
+      <tag name="form.type_extension" alias="form" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
+      <argument type="service" id="request_stack" on-invalid="null"/>
+    </service>
     <service id="data_collector.dump" class="Symfony\Component\HttpKernel\DataCollector\DumpDataCollector">
       <tag name="data_collector" id="dump" template="@Debug/Profiler/dump.html.twig" priority="240"/>
       <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
@@ -3366,6 +3681,10 @@
         <argument key="data_collector.dump" type="collection">
           <argument>dump</argument>
           <argument>@Debug/Profiler/dump.html.twig</argument>
+        </argument>
+        <argument key="easyadmin.data_collector" type="collection">
+          <argument>easyadmin</argument>
+          <argument>@EasyAdmin/data_collector/easyadmin.html.twig</argument>
         </argument>
         <argument key="data_collector.config" type="collection">
           <argument>config</argument>
@@ -3678,13 +3997,12 @@
       <argument type="service" id="security.encoder_factory"/>
       <argument type="service" id="fos_user.util.email_canonicalizer"/>
       <argument type="service" id="fos_user.util.email_canonicalizer"/>
-      <argument type="service">
-        <service class="Doctrine\ORM\EntityManager" public="false">
-          <argument>null</argument>
-          <factory service="doctrine" method="getManager"/>
-        </service>
-      </argument>
+      <argument type="service" id="fos_user.entity_manager"/>
       <argument>Utilisateurs\UtilisateursBundle\Entity\Utilisateurs</argument>
+    </service>
+    <service id="fos_user.group_manager" class="FOS\UserBundle\Doctrine\GroupManager">
+      <argument type="service" id="fos_user.entity_manager"/>
+      <argument>Utilisateurs\UtilisateursBundle\Entity\Group</argument>
     </service>
     <service id="twig.loader" class="Symfony\Bundle\TwigBundle\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
@@ -3721,6 +4039,10 @@
       <call method="addPath">
         <argument>C:\wamp\www\permisfute\vendor\friendsofsymfony\user-bundle/Resources/views</argument>
         <argument>FOSUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\permisfute\vendor\javiereguiluz\easyadmin-bundle/Resources/views</argument>
+        <argument>EasyAdmin</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp\www\permisfute\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>

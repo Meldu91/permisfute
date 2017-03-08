@@ -114,32 +114,29 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'UtilisateursBundle:Default:index',  '_route' => 'utilisateurs_homepage',);
         }
 
-        if (0 === strpos($pathinfo, '/Permisfute')) {
-            // permisfute_homepage
-            if ($pathinfo === '/Permisfute/index') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\AccueilController::accueilAction',  '_route' => 'permisfute_homepage',);
-            }
+        // permisfute_homepage
+        if ($pathinfo === '/index') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\AccueilController::accueilAction',  '_route' => 'permisfute_homepage',);
+        }
 
-            // permisfute_tarifs
-            if ($pathinfo === '/Permisfute/tarifs') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\TarifsController::tarifsAction',  '_route' => 'permisfute_tarifs',);
-            }
+        // permisfute_tarifs
+        if ($pathinfo === '/tarifs') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\TarifsController::tarifsAction',  '_route' => 'permisfute_tarifs',);
+        }
 
-            // permisfute_services
-            if ($pathinfo === '/Permisfute/services') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ServicesController::servicesAction',  '_route' => 'permisfute_services',);
-            }
+        // permisfute_services
+        if ($pathinfo === '/services') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ServicesController::servicesAction',  '_route' => 'permisfute_services',);
+        }
 
-            // permisfute_contact
-            if ($pathinfo === '/Permisfute/contact') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ContactController::contactAction',  '_route' => 'permisfute_contact',);
-            }
+        // permisfute_contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\ContactController::contactAction',  '_route' => 'permisfute_contact',);
+        }
 
-            // permisfute_inscription
-            if ($pathinfo === '/Permisfute/inscription') {
-                return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\InscriptionController::inscriptionAction',  '_route' => 'permisfute_inscription',);
-            }
-
+        // permisfute_inscription
+        if ($pathinfo === '/inscription') {
+            return array (  '_controller' => 'Permisfute\\PermisfuteBundle\\Controller\\InscriptionController::inscriptionAction',  '_route' => 'permisfute_inscription',);
         }
 
         if (0 === strpos($pathinfo, '/log')) {
@@ -328,6 +325,64 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_fos_user_change_password:
 
+        if (0 === strpos($pathinfo, '/group')) {
+            // fos_user_group_list
+            if ($pathinfo === '/group/list') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_fos_user_group_list;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\GroupController::listAction',  '_route' => 'fos_user_group_list',);
+            }
+            not_fos_user_group_list:
+
+            // fos_user_group_new
+            if ($pathinfo === '/group/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_fos_user_group_new;
+                }
+
+                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\GroupController::newAction',  '_route' => 'fos_user_group_new',);
+            }
+            not_fos_user_group_new:
+
+            // fos_user_group_show
+            if (preg_match('#^/group/(?P<groupName>[^/]++)$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_fos_user_group_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_group_show')), array (  '_controller' => 'FOS\\UserBundle\\Controller\\GroupController::showAction',));
+            }
+            not_fos_user_group_show:
+
+            // fos_user_group_edit
+            if (preg_match('#^/group/(?P<groupName>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_fos_user_group_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_group_edit')), array (  '_controller' => 'FOS\\UserBundle\\Controller\\GroupController::editAction',));
+            }
+            not_fos_user_group_edit:
+
+            // fos_user_group_delete
+            if (preg_match('#^/group/(?P<groupName>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_fos_user_group_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'fos_user_group_delete')), array (  '_controller' => 'FOS\\UserBundle\\Controller\\GroupController::deleteAction',));
+            }
+            not_fos_user_group_delete:
+
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -340,6 +395,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // salarie_user_register
         if ($pathinfo === '/salarie/register') {
             return array (  '_controller' => 'Utilisateurs\\UtilisateursBundle\\Controller\\RegistrationController::registerSalarieAction',  '_route' => 'salarie_user_register',);
+        }
+
+        if (0 === strpos($pathinfo, '/admin')) {
+            // easyadmin
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'easyadmin');
+                }
+
+                return array (  '_controller' => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'easyadmin',);
+            }
+
+            // admin
+            if (rtrim($pathinfo, '/') === '/admin') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'admin');
+                }
+
+                return array (  '_controller' => 'JavierEguiluz\\Bundle\\EasyAdminBundle\\Controller\\AdminController::indexAction',  '_route' => 'admin',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

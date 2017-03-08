@@ -33,7 +33,7 @@ class SalarieRegistrationType extends RegistrationFormType
                     "label" => "Adresse"
                 ])
                 
-                ->add('entrepriseSalarie', null, [
+                ->add('nomEntreprise', null, [
                     "label" => "Nom de l'entreprise"
                 ])
         ;
