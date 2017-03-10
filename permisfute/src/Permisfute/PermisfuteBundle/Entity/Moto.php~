@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="moto")
  * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\MotoRepository")
  */
-class Moto extends Modele
+class Moto
 {
     /**
      * @var int
@@ -22,11 +22,18 @@ class Moto extends Modele
     private $id;
 
     /**
+     * @var float
+     *
+     * @ORM\Column(name="consommationM", type="float")
+     */
+    private $consommationM;
+
+    /**
      * @var string
      *
-     * @ORM\Column(name="puissance", type="string", length=200, nullable=true)
+     * @ORM\Column(name="immatriculationM", type="string", length=7, unique=true)
      */
-    private $puissance;
+    private $immatriculationM;
 
 
     /**
@@ -40,25 +47,48 @@ class Moto extends Modele
     }
 
     /**
-     * Set puissance
+     * Set consommationM
      *
-     * @param string $puissance
+     * @param float $consommationM
      * @return Moto
      */
-    public function setPuissance($puissance)
+    public function setConsommationM($consommationM)
     {
-        $this->puissance = $puissance;
+        $this->consommationM = $consommationM;
 
         return $this;
     }
 
     /**
-     * Get puissance
+     * Get consommationM
+     *
+     * @return float 
+     */
+    public function getConsommationM()
+    {
+        return $this->consommationM;
+    }
+
+    /**
+     * Set immatriculationM
+     *
+     * @param string $immatriculationM
+     * @return Moto
+     */
+    public function setImmatriculationM($immatriculationM)
+    {
+        $this->immatriculationM = $immatriculationM;
+
+        return $this;
+    }
+
+    /**
+     * Get immatriculationM
      *
      * @return string 
      */
-    public function getPuissance()
+    public function getImmatriculationM()
     {
-        return $this->puissance;
+        return $this->immatriculationM;
     }
 }

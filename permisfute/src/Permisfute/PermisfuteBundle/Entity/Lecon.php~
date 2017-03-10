@@ -12,14 +12,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Lecon
 {
-    
-  
     /**
-     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\Voiture", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\Modele", cascade={"remove","persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     
-    private $voiture;
+    private $modele;  
     
     /**
      * @var int
@@ -192,25 +190,25 @@ class Lecon
     }
 
     /**
-     * Set voiture
+     * Set modele
      *
-     * @param \Permisfute\PermisfuteBundle\Entity\Voiture $voiture
+     * @param \Permisfute\PermisfuteBundle\Entity\Modele $modele
      * @return Lecon
      */
-    public function setVoiture(\Permisfute\PermisfuteBundle\Entity\Voiture $voiture)
+    public function setModele(\Permisfute\PermisfuteBundle\Entity\Modele $modele)
     {
-        $this->voiture = $voiture;
+        $this->modele = $modele;
 
         return $this;
     }
 
     /**
-     * Get voiture
+     * Get modele
      *
-     * @return \Permisfute\PermisfuteBundle\Entity\Voiture 
+     * @return \Permisfute\PermisfuteBundle\Entity\Modele 
      */
-    public function getVoiture()
+    public function getModele()
     {
-        return $this->voiture;
+        return $this->modele;
     }
 }

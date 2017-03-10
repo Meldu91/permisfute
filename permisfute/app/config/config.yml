@@ -45,8 +45,7 @@ easy_admin:
             - Lecon
             - Voiture
             - { label: 'Utilisateurs' }
-            - User          
-            
+            - User                     
     entities:
         User:
             class: Utilisateurs\UtilisateursBundle\Entity\Utilisateurs

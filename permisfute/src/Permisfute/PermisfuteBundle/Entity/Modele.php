@@ -9,7 +9,11 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="modele")
  * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\ModeleRepository")
+ * @ORM\InheritanceType("SINGLE_TABLE")
+ * @ORM\DiscriminatorColumn(name="discr", type="string")
+ * @ORM\DiscriminatorMap({"modele" = "Modele", "voiture" = "Voiture", "moto"="Moto"})
  */
+
 class Modele
 {
     /**
@@ -31,9 +35,9 @@ class Modele
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="date")
+     * @ORM\Column(name="anciennete", type="date", nullable=true)
      */
-    private $date;
+    private $anciennete;
 
 
     /**
@@ -70,25 +74,25 @@ class Modele
     }
 
     /**
-     * Set date
+     * Set anciennete
      *
-     * @param \DateTime $date
+     * @param \DateTime $anciennete
      * @return Modele
      */
-    public function setDate($date)
+    public function setAnciennete($anciennete)
     {
-        $this->date = $date;
+        $this->anciennete = $anciennete;
 
         return $this;
     }
 
     /**
-     * Get date
+     * Get anciennete
      *
      * @return \DateTime 
      */
-    public function getDate()
+    public function getAnciennete()
     {
-        return $this->date;
+        return $this->anciennete;
     }
 }

@@ -21,20 +21,20 @@ class __TwigTemplate_d054a8d32d198725dee1417d07736e9c9d816f526650633db03b9cb5708
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bc455878a24c9a7fe22f61e4d64d7346371ffa5f252e6e47e6070369839f8ad3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bc455878a24c9a7fe22f61e4d64d7346371ffa5f252e6e47e6070369839f8ad3->enter($__internal_bc455878a24c9a7fe22f61e4d64d7346371ffa5f252e6e47e6070369839f8ad3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
+        $__internal_7adb0eb766d0409621eccc69b51b4c27a03358f84d388fa298d67457f7dd398c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7adb0eb766d0409621eccc69b51b4c27a03358f84d388fa298d67457f7dd398c->enter($__internal_7adb0eb766d0409621eccc69b51b4c27a03358f84d388fa298d67457f7dd398c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_bc455878a24c9a7fe22f61e4d64d7346371ffa5f252e6e47e6070369839f8ad3->leave($__internal_bc455878a24c9a7fe22f61e4d64d7346371ffa5f252e6e47e6070369839f8ad3_prof);
+        $__internal_7adb0eb766d0409621eccc69b51b4c27a03358f84d388fa298d67457f7dd398c->leave($__internal_7adb0eb766d0409621eccc69b51b4c27a03358f84d388fa298d67457f7dd398c_prof);
 
     }
 
     // line 5
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_1093694080ef0541b5a3d4c953815c75adbae3565a62cffea941b3a378af6403 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1093694080ef0541b5a3d4c953815c75adbae3565a62cffea941b3a378af6403->enter($__internal_1093694080ef0541b5a3d4c953815c75adbae3565a62cffea941b3a378af6403_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_70a5b31b4d28ec373d90088b27a5aa0e7d6af0920385ed94544f6d3e330e2fa5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_70a5b31b4d28ec373d90088b27a5aa0e7d6af0920385ed94544f6d3e330e2fa5->enter($__internal_70a5b31b4d28ec373d90088b27a5aa0e7d6af0920385ed94544f6d3e330e2fa5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 6
         if ((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error"))) {
@@ -45,44 +45,92 @@ class __TwigTemplate_d054a8d32d198725dee1417d07736e9c9d816f526650633db03b9cb5708
 ";
         }
         // line 9
-        echo "coucou lele lele 
-<form action=\"";
-        // line 10
+        echo "<style>
+    div {
+        margin-bottom: 1px;
+    }
+    body { 
+        background: #151515;
+        text-align: center;
+    }
+    body, input, textarea { 
+        font: 14px/24px Helvetica, Arial, sans-serif; 
+        color: #C52D2F; 
+    }
+    input { 
+        width: 30% 
+    }
+    form { 
+        margin: 5px 0 0 0 
+    }
+    input, textarea { 
+        background: none repeat scroll 0 0 #FFFFFF; 
+        border: 1px solid #C9C9C9; 
+        
+        color: #545658; 
+        padding: 3px; 
+        font-size: 14px; 
+        margin-bottom: 15px;
+    }
+    form label { 
+        display: block; 
+        margin-bottom: 5px; 
+        font-weight: bold; 
+        font-size: 20px; 
+    }
+</style>
+<section id=\"services\" class=\"service-item\">
+    <div class=\"container\">
+        <div class=\"center wow fadeInDown\">
+            <br />
+            <h2>Vous souhaitez vous connecter ?</h2>
+            <p class=\"lead\">Rentrez votre nom d'utilisateur et votre mot de passe pour vous connecter à Permis futé !</p>
+        </div>
+
+        <div class=\"row\">
+            <center>
+                <form action=\"";
+        // line 53
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_check");
         echo "\" method=\"post\">
     <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 11
+        // line 54
         echo twig_escape_filter($this->env, (isset($context["csrf_token"]) ? $context["csrf_token"] : $this->getContext($context, "csrf_token")), "html", null, true);
         echo "\" />
     <label for=\"username\">";
-        // line 12
+        // line 55
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.username", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
     <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 13
+        // line 56
         echo twig_escape_filter($this->env, (isset($context["last_username"]) ? $context["last_username"] : $this->getContext($context, "last_username")), "html", null, true);
         echo "\" required=\"required\" />
 
     <label for=\"password\">";
-        // line 15
+        // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.password", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
     <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" />
-
+    <br>
     <input type=\"checkbox\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
     <label for=\"remember_me\">";
-        // line 19
+        // line 62
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.remember_me", array(), "FOSUserBundle"), "html", null, true);
         echo "</label>
-
+    <br>
     <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"";
-        // line 21
+        // line 64
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.submit", array(), "FOSUserBundle"), "html", null, true);
         echo "\" />
 </form>
+            </center>                         
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#services-->
+
 ";
         
-        $__internal_1093694080ef0541b5a3d4c953815c75adbae3565a62cffea941b3a378af6403->leave($__internal_1093694080ef0541b5a3d4c953815c75adbae3565a62cffea941b3a378af6403_prof);
+        $__internal_70a5b31b4d28ec373d90088b27a5aa0e7d6af0920385ed94544f6d3e330e2fa5->leave($__internal_70a5b31b4d28ec373d90088b27a5aa0e7d6af0920385ed94544f6d3e330e2fa5_prof);
 
     }
 
@@ -98,7 +146,7 @@ class __TwigTemplate_d054a8d32d198725dee1417d07736e9c9d816f526650633db03b9cb5708
 
     public function getDebugInfo()
     {
-        return array (  80 => 21,  75 => 19,  68 => 15,  63 => 13,  59 => 12,  55 => 11,  51 => 10,  48 => 9,  42 => 7,  40 => 6,  34 => 5,  11 => 1,);
+        return array (  123 => 64,  118 => 62,  111 => 58,  106 => 56,  102 => 55,  98 => 54,  94 => 53,  48 => 9,  42 => 7,  40 => 6,  34 => 5,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -119,20 +167,68 @@ class __TwigTemplate_d054a8d32d198725dee1417d07736e9c9d816f526650633db03b9cb5708
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
-coucou lele lele 
-<form action=\"{{ path(\"fos_user_security_check\") }}\" method=\"post\">
+<style>
+    div {
+        margin-bottom: 1px;
+    }
+    body { 
+        background: #151515;
+        text-align: center;
+    }
+    body, input, textarea { 
+        font: 14px/24px Helvetica, Arial, sans-serif; 
+        color: #C52D2F; 
+    }
+    input { 
+        width: 30% 
+    }
+    form { 
+        margin: 5px 0 0 0 
+    }
+    input, textarea { 
+        background: none repeat scroll 0 0 #FFFFFF; 
+        border: 1px solid #C9C9C9; 
+        
+        color: #545658; 
+        padding: 3px; 
+        font-size: 14px; 
+        margin-bottom: 15px;
+    }
+    form label { 
+        display: block; 
+        margin-bottom: 5px; 
+        font-weight: bold; 
+        font-size: 20px; 
+    }
+</style>
+<section id=\"services\" class=\"service-item\">
+    <div class=\"container\">
+        <div class=\"center wow fadeInDown\">
+            <br />
+            <h2>Vous souhaitez vous connecter ?</h2>
+            <p class=\"lead\">Rentrez votre nom d'utilisateur et votre mot de passe pour vous connecter à Permis futé !</p>
+        </div>
+
+        <div class=\"row\">
+            <center>
+                <form action=\"{{ path(\"fos_user_security_check\") }}\" method=\"post\">
     <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token }}\" />
     <label for=\"username\">{{ 'security.login.username'|trans }}</label>
     <input type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\" />
 
     <label for=\"password\">{{ 'security.login.password'|trans }}</label>
     <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" />
-
+    <br>
     <input type=\"checkbox\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
     <label for=\"remember_me\">{{ 'security.login.remember_me'|trans }}</label>
-
+    <br>
     <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"{{ 'security.login.submit'|trans }}\" />
 </form>
+            </center>                         
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#services-->
+
 {% endblock fos_user_content %}
 ", "FOSUserBundle:Security:login.html.twig", "C:\\wamp\\www\\permisfute\\app/Resources/FOSUserBundle/views/Security/login.html.twig");
     }

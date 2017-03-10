@@ -4,3 +4,4 @@ services:
         class: Utilisateurs\UtilisateursBundle\Form\EtudiantRegistrationType
         tags:
             - {name: form.type, alias: etudiant_user_registration}
+            

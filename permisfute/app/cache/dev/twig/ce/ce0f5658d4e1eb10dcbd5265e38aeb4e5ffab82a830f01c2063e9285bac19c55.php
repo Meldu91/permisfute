@@ -21,24 +21,23 @@ class __TwigTemplate_85a5172aa7913c8622e0c8c833dd4d0273032939236573f8248b199644d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_665c34a40d28f9b2d51029349abb2118dfd0bb93fc2ba6a14f3ee52f781b97cf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_665c34a40d28f9b2d51029349abb2118dfd0bb93fc2ba6a14f3ee52f781b97cf->enter($__internal_665c34a40d28f9b2d51029349abb2118dfd0bb93fc2ba6a14f3ee52f781b97cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:inscription.html.twig"));
+        $__internal_d99bd504e218fea5ea3361848a67218b8a7b2268113b52d2e38e7cec7f2b9a5a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d99bd504e218fea5ea3361848a67218b8a7b2268113b52d2e38e7cec7f2b9a5a->enter($__internal_d99bd504e218fea5ea3361848a67218b8a7b2268113b52d2e38e7cec7f2b9a5a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:inscription.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_665c34a40d28f9b2d51029349abb2118dfd0bb93fc2ba6a14f3ee52f781b97cf->leave($__internal_665c34a40d28f9b2d51029349abb2118dfd0bb93fc2ba6a14f3ee52f781b97cf_prof);
+        $__internal_d99bd504e218fea5ea3361848a67218b8a7b2268113b52d2e38e7cec7f2b9a5a->leave($__internal_d99bd504e218fea5ea3361848a67218b8a7b2268113b52d2e38e7cec7f2b9a5a_prof);
 
     }
 
-    // line 4
+    // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d180c10297464bbc1e4df5a9f5c4580a5d88b183460022973a1f7e415fdbabaa = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d180c10297464bbc1e4df5a9f5c4580a5d88b183460022973a1f7e415fdbabaa->enter($__internal_d180c10297464bbc1e4df5a9f5c4580a5d88b183460022973a1f7e415fdbabaa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5ebe0bb8a451f864c35561a00255ac385fe5fe17bde41c014ee58cb5f9ad5ef6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5ebe0bb8a451f864c35561a00255ac385fe5fe17bde41c014ee58cb5f9ad5ef6->enter($__internal_5ebe0bb8a451f864c35561a00255ac385fe5fe17bde41c014ee58cb5f9ad5ef6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 5
-        echo "
-    <style>
+        // line 6
+        echo "    <style>
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -59,6 +58,7 @@ class __TwigTemplate_85a5172aa7913c8622e0c8c833dd4d0273032939236573f8248b199644d
             border: 1px solid #1f6b81;
         }
     </style>
+
     <section id=\"services\" class=\"service-item\">
         <div class=\"container\">
             <div class=\"center wow fadeInDown\">
@@ -69,11 +69,11 @@ class __TwigTemplate_85a5172aa7913c8622e0c8c833dd4d0273032939236573f8248b199644d
             <div class=\"row\">
                 <center>
                     <a href=\"";
-        // line 36
+        // line 37
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("salarie_user_register");
         echo "\" class=\"btn\">Vous êtes un salarié</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href=\"";
-        // line 37
+        // line 38
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
         echo "\" class=\"btn\">Vous êtes un étudiant</a>
                 </center>                         
@@ -167,7 +167,7 @@ class __TwigTemplate_85a5172aa7913c8622e0c8c833dd4d0273032939236573f8248b199644d
 
 ";
         
-        $__internal_d180c10297464bbc1e4df5a9f5c4580a5d88b183460022973a1f7e415fdbabaa->leave($__internal_d180c10297464bbc1e4df5a9f5c4580a5d88b183460022973a1f7e415fdbabaa_prof);
+        $__internal_5ebe0bb8a451f864c35561a00255ac385fe5fe17bde41c014ee58cb5f9ad5ef6->leave($__internal_5ebe0bb8a451f864c35561a00255ac385fe5fe17bde41c014ee58cb5f9ad5ef6_prof);
 
     }
 
@@ -183,7 +183,7 @@ class __TwigTemplate_85a5172aa7913c8622e0c8c833dd4d0273032939236573f8248b199644d
 
     public function getDebugInfo()
     {
-        return array (  77 => 37,  73 => 36,  40 => 5,  34 => 4,  11 => 1,);
+        return array (  77 => 38,  73 => 37,  40 => 6,  34 => 5,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -199,8 +199,8 @@ class __TwigTemplate_85a5172aa7913c8622e0c8c833dd4d0273032939236573f8248b199644d
         return new Twig_Source("{% extends '::layout/layout.html.twig' %}
 
 
-{% block body %}
 
+{% block body %}
     <style>
         .btn {
             display: inline-block;
@@ -222,6 +222,7 @@ class __TwigTemplate_85a5172aa7913c8622e0c8c833dd4d0273032939236573f8248b199644d
             border: 1px solid #1f6b81;
         }
     </style>
+
     <section id=\"services\" class=\"service-item\">
         <div class=\"container\">
             <div class=\"center wow fadeInDown\">

@@ -13,11 +13,12 @@ class AdminController extends BaseAdminController
 
     public function prePersistUtilisateursEntity($user)
     {
-        $this->get('fos_user.user_manager')->updateUser($user, false);
+        $this->get('fos_user.user_manager')->updateUser($user, true);
     }
     
     public function preUpdateUtilisateursEntity($user)
     {
-        $this->get('fos_user.user_manager')->updateUser($user, false);
+        $this->get('fos_user.user_manager')->updateUser($user, true);
     }
+    
 }
