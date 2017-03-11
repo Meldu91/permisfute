@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="voiture")
  * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\VoitureRepository")
  */
-class Voiture
+class Voiture extends Modele
 {
     /**
      * @var int
@@ -22,18 +22,18 @@ class Voiture
     private $id;
 
     /**
-     * @var string
+     * @var float
      *
-     * @ORM\Column(name="immatriculation", type="string", length=7, unique=true)
+     * @ORM\Column(name="consommationV", type="float")
      */
-    private $immatriculation;
+    private $consommationV;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="consommation", type="decimal", precision=2, scale=2)
+     * @ORM\Column(name="immatriculationV", type="string", length=7, unique=true)
      */
-    private $consommation;
+    private $immatriculationV;
 
 
     /**
@@ -47,48 +47,48 @@ class Voiture
     }
 
     /**
-     * Set immatriculation
+     * Set consommationV
      *
-     * @param string $immatriculation
+     * @param float $consommationV
      * @return Voiture
      */
-    public function setImmatriculation($immatriculation)
+    public function setConsommationV($consommationV)
     {
-        $this->immatriculation = $immatriculation;
+        $this->consommationV = $consommationV;
 
         return $this;
     }
 
     /**
-     * Get immatriculation
+     * Get consommationV
      *
-     * @return string 
+     * @return float 
      */
-    public function getImmatriculation()
+    public function getConsommationV()
     {
-        return $this->immatriculation;
+        return $this->consommationV;
     }
 
     /**
-     * Set consommation
+     * Set immatriculationV
      *
-     * @param string $consommation
+     * @param string $immatriculationV
      * @return Voiture
      */
-    public function setConsommation($consommation)
+    public function setImmatriculationV($immatriculationV)
     {
-        $this->consommation = $consommation;
+        $this->immatriculationV = $immatriculationV;
 
         return $this;
     }
 
     /**
-     * Get consommation
+     * Get immatriculationV
      *
      * @return string 
      */
-    public function getConsommation()
+    public function getImmatriculationV()
     {
-        return $this->consommation;
+        return $this->immatriculationV;
     }
 }
