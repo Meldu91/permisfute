@@ -10,9 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="modele")
  * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\ModeleRepository")
  * @ORM\InheritanceType("SINGLE_TABLE")
- * @ORM\DiscriminatorColumn(name="modeleType", type="string")
- * @ORM\DiscriminatorMap({"voiture" = "Voiture", "moto" = "Moto"})
- * 
+ * @ORM\DiscriminatorColumn(name="discr", type="string")
+ * @ORM\DiscriminatorMap({"modele" = "Modele", "voiture" = "Voiture", "moto"="Moto"})
  */
 
 class Modele
@@ -29,25 +28,18 @@ class Modele
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=150)
+     * @ORM\Column(name="nom", type="string", length=100)
      */
     private $nom;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="date", nullable=true)
+     * @ORM\Column(name="anciennete", type="date", nullable=true)
      */
-    private $date;
+    private $anciennete;
 
-    /**
-     * @var text
-     * 
-     * @ORM\column(name="immatriculation", type="text", length=7, nullable=false)
-     */
-    
-    private $immatriculation;
-            
+
     /**
      * Get id
      *
@@ -82,48 +74,25 @@ class Modele
     }
 
     /**
-     * Set date
+     * Set anciennete
      *
-     * @param \DateTime $date
+     * @param \DateTime $anciennete
      * @return Modele
      */
-    public function setDate($date)
+    public function setAnciennete($anciennete)
     {
-        $this->date = $date;
+        $this->anciennete = $anciennete;
 
         return $this;
     }
 
     /**
-     * Get date
+     * Get anciennete
      *
      * @return \DateTime 
      */
-    public function getDate()
+    public function getAnciennete()
     {
-        return $this->date;
-    }
-
-    /**
-     * Set immatriculation
-     *
-     * @param string $immatriculation
-     * @return Modele
-     */
-    public function setImmatriculation($immatriculation)
-    {
-        $this->immatriculation = $immatriculation;
-
-        return $this;
-    }
-
-    /**
-     * Get immatriculation
-     *
-     * @return string 
-     */
-    public function getImmatriculation()
-    {
-        return $this->immatriculation;
+        return $this->anciennete;
     }
 }

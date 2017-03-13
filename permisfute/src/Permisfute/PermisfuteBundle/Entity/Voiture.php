@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="voiture")
  * @ORM\Entity(repositoryClass="Permisfute\PermisfuteBundle\Repository\VoitureRepository")
  */
-class Voiture
+class Voiture extends Modele
 {
     /**
      * @var int
@@ -22,39 +22,18 @@ class Voiture
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="immatriculation", type="string", length=7, unique=true)
-     */
-    private $immatriculation;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="modele", type="string", length=100, nullable=true)
-     */
-    private $modele;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_achat", type="date")
-     */
-    private $dateAchat;
-
-    /**
      * @var float
      *
-     * @ORM\Column(name="nombreKM", type="float", nullable=true)
+     * @ORM\Column(name="consommationV", type="float")
      */
-    private $nombreKM;
+    private $consommationV;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="consommation", type="decimal", precision=2, scale=2)
+     * @ORM\Column(name="immatriculationV", type="string", length=7, unique=true)
      */
-    private $consommation;
+    private $immatriculationV;
 
 
     /**
@@ -68,117 +47,48 @@ class Voiture
     }
 
     /**
-     * Set immatriculation
+     * Set consommationV
      *
-     * @param string $immatriculation
+     * @param float $consommationV
      * @return Voiture
      */
-    public function setImmatriculation($immatriculation)
+    public function setConsommationV($consommationV)
     {
-        $this->immatriculation = $immatriculation;
+        $this->consommationV = $consommationV;
 
         return $this;
     }
 
     /**
-     * Get immatriculation
-     *
-     * @return string 
-     */
-    public function getImmatriculation()
-    {
-        return $this->immatriculation;
-    }
-
-    /**
-     * Set modele
-     *
-     * @param string $modele
-     * @return Voiture
-     */
-    public function setModele($modele)
-    {
-        $this->modele = $modele;
-
-        return $this;
-    }
-
-    /**
-     * Get modele
-     *
-     * @return string 
-     */
-    public function getModele()
-    {
-        return $this->modele;
-    }
-
-    /**
-     * Set dateAchat
-     *
-     * @param \DateTime $dateAchat
-     * @return Voiture
-     */
-    public function setDateAchat($dateAchat)
-    {
-        $this->dateAchat = $dateAchat;
-
-        return $this;
-    }
-
-    /**
-     * Get dateAchat
-     *
-     * @return \DateTime 
-     */
-    public function getDateAchat()
-    {
-        return $this->dateAchat;
-    }
-
-    /**
-     * Set nombreKM
-     *
-     * @param float $nombreKM
-     * @return Voiture
-     */
-    public function setNombreKM($nombreKM)
-    {
-        $this->nombreKM = $nombreKM;
-
-        return $this;
-    }
-
-    /**
-     * Get nombreKM
+     * Get consommationV
      *
      * @return float 
      */
-    public function getNombreKM()
+    public function getConsommationV()
     {
-        return $this->nombreKM;
+        return $this->consommationV;
     }
 
     /**
-     * Set consommation
+     * Set immatriculationV
      *
-     * @param string $consommation
+     * @param string $immatriculationV
      * @return Voiture
      */
-    public function setConsommation($consommation)
+    public function setImmatriculationV($immatriculationV)
     {
-        $this->consommation = $consommation;
+        $this->immatriculationV = $immatriculationV;
 
         return $this;
     }
 
     /**
-     * Get consommation
+     * Get immatriculationV
      *
      * @return string 
      */
-    public function getConsommation()
+    public function getImmatriculationV()
     {
-        return $this->consommation;
+        return $this->immatriculationV;
     }
 }

@@ -56,4 +56,50 @@ class ExamenPUtilisateurs
     {
         return $this->libelleP;
     }
+
+    /**
+     * Set examen_p
+     *
+     * @param \Permisfute\PermisfuteBundle\Entity\ExamenP $examenP
+     * @return ExamenPUtilisateurs
+     */
+    public function setExamenP(\Permisfute\PermisfuteBundle\Entity\ExamenP $examenP)
+    {
+        $this->examen_p = $examenP;
+
+        return $this;
+    }
+
+    /**
+     * Get examen_p
+     *
+     * @return \Permisfute\PermisfuteBundle\Entity\ExamenP 
+     */
+    public function getExamenP()
+    {
+        return $this->examen_p;
+    }
+
+    /**
+     * Set utilisateurs
+     *
+     * @param \Utilisateurs\UtilisateursBundle\Entity\Utilisateurs $utilisateurs
+     * @return ExamenPUtilisateurs
+     */
+    public function setUtilisateurs(\Utilisateurs\UtilisateursBundle\Entity\Utilisateurs $utilisateurs)
+    {
+        $this->utilisateurs = $utilisateurs;
+
+        return $this;
+    }
+
+    /**
+     * Get utilisateurs
+     *
+     * @return \Utilisateurs\UtilisateursBundle\Entity\Utilisateurs 
+     */
+    public function getUtilisateurs()
+    {
+        return $this->utilisateurs;
+    }
 }
