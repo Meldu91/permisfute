@@ -21,20 +21,20 @@ class __TwigTemplate_751ec3c5a18e55ff70064ea296e76979e81e83505cbf4db28d98526847c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_86709a9fed2a801ac5eb3c5f954756b98ac35dfc7f5ba3c8ae632b6fea4c46f6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_86709a9fed2a801ac5eb3c5f954756b98ac35dfc7f5ba3c8ae632b6fea4c46f6->enter($__internal_86709a9fed2a801ac5eb3c5f954756b98ac35dfc7f5ba3c8ae632b6fea4c46f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
+        $__internal_18868479abc60a77dbe241381c366787e06844b4935c7f4aa08e2c839e17a72b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_18868479abc60a77dbe241381c366787e06844b4935c7f4aa08e2c839e17a72b->enter($__internal_18868479abc60a77dbe241381c366787e06844b4935c7f4aa08e2c839e17a72b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_86709a9fed2a801ac5eb3c5f954756b98ac35dfc7f5ba3c8ae632b6fea4c46f6->leave($__internal_86709a9fed2a801ac5eb3c5f954756b98ac35dfc7f5ba3c8ae632b6fea4c46f6_prof);
+        $__internal_18868479abc60a77dbe241381c366787e06844b4935c7f4aa08e2c839e17a72b->leave($__internal_18868479abc60a77dbe241381c366787e06844b4935c7f4aa08e2c839e17a72b_prof);
 
     }
 
     // line 5
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_4554185a8fe0310dbe6431c4f5ff9808f226b59d50ba6f69cedad6837a48cc24 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4554185a8fe0310dbe6431c4f5ff9808f226b59d50ba6f69cedad6837a48cc24->enter($__internal_4554185a8fe0310dbe6431c4f5ff9808f226b59d50ba6f69cedad6837a48cc24_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_2f3eb67c8d37f60e71a6bb93366bd12792d56b34149c04e8946f6395e2797b86 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2f3eb67c8d37f60e71a6bb93366bd12792d56b34149c04e8946f6395e2797b86->enter($__internal_2f3eb67c8d37f60e71a6bb93366bd12792d56b34149c04e8946f6395e2797b86_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 6
         if ((isset($context["error"]) ? $context["error"] : $this->getContext($context, "error"))) {
@@ -122,7 +122,6 @@ class __TwigTemplate_751ec3c5a18e55ff70064ea296e76979e81e83505cbf4db28d98526847c
         // line 64
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("security.login.submit", array(), "FOSUserBundle"), "html", null, true);
         echo "\" />
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
 </form>
             </center>                         
         </div><!--/.row-->
@@ -131,7 +130,7 @@ class __TwigTemplate_751ec3c5a18e55ff70064ea296e76979e81e83505cbf4db28d98526847c
 
 ";
         
-        $__internal_4554185a8fe0310dbe6431c4f5ff9808f226b59d50ba6f69cedad6837a48cc24->leave($__internal_4554185a8fe0310dbe6431c4f5ff9808f226b59d50ba6f69cedad6837a48cc24_prof);
+        $__internal_2f3eb67c8d37f60e71a6bb93366bd12792d56b34149c04e8946f6395e2797b86->leave($__internal_2f3eb67c8d37f60e71a6bb93366bd12792d56b34149c04e8946f6395e2797b86_prof);
 
     }
 
@@ -224,7 +223,6 @@ class __TwigTemplate_751ec3c5a18e55ff70064ea296e76979e81e83505cbf4db28d98526847c
     <label for=\"remember_me\">{{ 'security.login.remember_me'|trans }}</label>
     <br>
     <input type=\"submit\" id=\"_submit\" name=\"_submit\" value=\"{{ 'security.login.submit'|trans }}\" />
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
 </form>
             </center>                         
         </div><!--/.row-->

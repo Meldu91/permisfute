@@ -1,6 +1,59 @@
 {% trans_default_domain 'FOSUserBundle' %}
+<style>
+    div {
+        margin-bottom: 1px;
+    }
+    body { 
+        background: #151515;
+        text-align: center;
+    }
+    body, input, textarea { 
+        font: 14px/24px Helvetica, Arial, sans-serif; 
+        color: #C52D2F; 
+    }
+    input { 
+        width: 30% 
+    }
+    form { 
+        margin: 5px 0 0 0 
+    }
+    input, textarea { 
+        background: none repeat scroll 0 0 #FFFFFF; 
+        border: 1px solid #C9C9C9; 
+        color: #545658; 
+        padding: 3px; 
+        font-size: 14px; 
+        margin-bottom: 15px;
+    }
+    form label { 
+        display: block; 
+        margin-bottom: 5px; 
+        font-weight: bold; 
+        font-size: 20px; 
+    }
+</style>
+<section id="services" class="service-item">
+    <div class="container">
+        <div class="center wow fadeInDown">
+            <br />
+            <h2>Votre profil</h2>
+            <p class="lead">Ici vous retrouverez toutes les informations concernant votre profil.</p>
+        </div>
 
-<div class="fos_user_user_show">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-</div>
+        <div class="row">
+            <center>
+                <div class="fos_user_user_show">
+                    <font size="4" color="white"><p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p></FONT>
+                    <font size="4" color="white"><p>Mot de passe : <a href="{{ path ('fos_user_change_password') }}">Modifier</a></p></FONT>
+                    <font size="4" color="white"><p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p></FONT>
+                    <font size="4" color="white"><p>{{ 'Nom'|trans }}: {{ user.nom }}</p></FONT>
+                    <font size="4" color="white"><p>{{ 'Prénom'|trans }}: {{ user.prenom }}</p></FONT>
+                    <font size="4" color="white"><p>{{ 'Téléphone'|trans }}: {{ user.telephone }}</p></FONT>
+                    <font size="4" color="white"><p>{{ 'Adresse'|trans }}: {{ user.adresse }}</p></FONT>
+                    <br><br><br><br>
+                </div>
+            </center>                         
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#services-->
+

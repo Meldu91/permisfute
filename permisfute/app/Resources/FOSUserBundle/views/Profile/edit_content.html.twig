@@ -1,8 +1,54 @@
 {% trans_default_domain 'FOSUserBundle' %}
+<style>
+    div {
+        margin-bottom: 1px;
+    }
+    body { 
+        background: #151515;
+        text-align: center;
+    }
+    body, input, textarea { 
+        font: 14px/24px Helvetica, Arial, sans-serif; 
+        color: #C52D2F; 
+    }
+    input { 
+        width: 30% 
+    }
+    form { 
+        margin: 5px 0 0 0 
+    }
+    input, textarea { 
+        background: none repeat scroll 0 0 #FFFFFF; 
+        border: 1px solid #C9C9C9; 
+        color: #545658; 
+        padding: 3px; 
+        font-size: 14px; 
+        margin-bottom: 15px;
+    }
+    form label { 
+        display: block; 
+        margin-bottom: 5px; 
+        font-weight: bold; 
+        font-size: 20px; 
+    }
+</style>
+<section id="services" class="service-item">
+    <div class="container">
+        <div class="center wow fadeInDown">
+            <br />
+            <h2>Modification du profil</h2>
+            <p class="lead">Remplissez les champs que vous souhaitez modifier</p>
+        </div>
 
-<form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
-    </div>
-</form>
+        <div class="row">
+            <center>
+                <form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
+                    {{ form_widget(form) }}
+                    <div>
+                        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+                    </div>
+                </form>
+            </center>                         
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#services-->

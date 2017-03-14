@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Lecon
 {
     /**
-     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\Modele", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Permisfute\PermisfuteBundle\Entity\Modele", cascade={"remove","persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     

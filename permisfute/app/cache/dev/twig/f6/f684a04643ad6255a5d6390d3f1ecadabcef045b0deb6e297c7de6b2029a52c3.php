@@ -21,20 +21,20 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a95ced80b769be1c86d49011cda3c46f63d1a1c62fe01902dbcf351444506bf4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a95ced80b769be1c86d49011cda3c46f63d1a1c62fe01902dbcf351444506bf4->enter($__internal_a95ced80b769be1c86d49011cda3c46f63d1a1c62fe01902dbcf351444506bf4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:index.html.twig"));
+        $__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a->enter($__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a95ced80b769be1c86d49011cda3c46f63d1a1c62fe01902dbcf351444506bf4->leave($__internal_a95ced80b769be1c86d49011cda3c46f63d1a1c62fe01902dbcf351444506bf4_prof);
+        $__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a->leave($__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fb591c71e6d4852be57a0ff030e0f995005110f64fa3ef8fad638b7d27690d6e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fb591c71e6d4852be57a0ff030e0f995005110f64fa3ef8fad638b7d27690d6e->enter($__internal_fb591c71e6d4852be57a0ff030e0f995005110f64fa3ef8fad638b7d27690d6e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f->enter($__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
         echo "
@@ -74,7 +74,10 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
                     <div class=\"media-body\">
                         <h3 class=\"media-heading\">Code de la route</h3>
                         <p>Passez votre code de la route grâce à nos cours et séances à résultats directs.</p>
-                        <a href=\"../Permisfute/services\">Plus d'informations</a>
+                        <a href=\"";
+        // line 36
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_services");
+        echo "\">Plus d'informations</a>
                     </div>
                 </div>
             </div>
@@ -90,7 +93,10 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
                     <div class=\"media-body\">
                         <h3 class=\"media-heading\">Permis B</h3>
                         <p>Passez votre permis B auprès de nos 2 moniteurs très expérimentés.</p>
-                        <a href=\"../Permisfute/services\">Plus d'informations</a>
+                        <a href=\"";
+        // line 49
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_services");
+        echo "\">Plus d'informations</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +112,10 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
                     <div class=\"media-body\">
                         <h3 class=\"media-heading\">Permis A</h3>
                         <p>Passez votre permis A avec un moniteur spécialisé dans ce permis.</p>
-                        <a href=\"../Permisfute/services\">Plus d'informations</a>
+                        <a href=\"";
+        // line 62
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("permisfute_services");
+        echo "\">Plus d'informations</a>
                     </div>
                 </div>
             </div>             
@@ -210,7 +219,7 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
 </section><!--/#bottom-->
 ";
         
-        $__internal_fb591c71e6d4852be57a0ff030e0f995005110f64fa3ef8fad638b7d27690d6e->leave($__internal_fb591c71e6d4852be57a0ff030e0f995005110f64fa3ef8fad638b7d27690d6e_prof);
+        $__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f->leave($__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f_prof);
 
     }
 
@@ -226,7 +235,7 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
 
     public function getDebugInfo()
     {
-        return array (  188 => 124,  144 => 83,  140 => 82,  136 => 81,  132 => 80,  128 => 79,  103 => 57,  87 => 44,  71 => 31,  50 => 13,  40 => 5,  34 => 4,  11 => 1,);
+        return array (  197 => 124,  153 => 83,  149 => 82,  145 => 81,  141 => 80,  137 => 79,  117 => 62,  109 => 57,  98 => 49,  90 => 44,  79 => 36,  71 => 31,  50 => 13,  40 => 5,  34 => 4,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -274,7 +283,7 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
                     <div class=\"media-body\">
                         <h3 class=\"media-heading\">Code de la route</h3>
                         <p>Passez votre code de la route grâce à nos cours et séances à résultats directs.</p>
-                        <a href=\"../Permisfute/services\">Plus d'informations</a>
+                        <a href=\"{{ path ('permisfute_services') }}\">Plus d'informations</a>
                     </div>
                 </div>
             </div>
@@ -287,7 +296,7 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
                     <div class=\"media-body\">
                         <h3 class=\"media-heading\">Permis B</h3>
                         <p>Passez votre permis B auprès de nos 2 moniteurs très expérimentés.</p>
-                        <a href=\"../Permisfute/services\">Plus d'informations</a>
+                        <a href=\"{{ path ('permisfute_services') }}\">Plus d'informations</a>
                     </div>
                 </div>
             </div>
@@ -300,7 +309,7 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
                     <div class=\"media-body\">
                         <h3 class=\"media-heading\">Permis A</h3>
                         <p>Passez votre permis A avec un moniteur spécialisé dans ce permis.</p>
-                        <a href=\"../Permisfute/services\">Plus d'informations</a>
+                        <a href=\"{{ path ('permisfute_services') }}\">Plus d'informations</a>
                     </div>
                 </div>
             </div>             
