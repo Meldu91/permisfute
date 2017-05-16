@@ -21,33 +21,33 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a->enter($__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:index.html.twig"));
+        $__internal_37105ef9ea57b6289fa1498c0c6871aa48d63dd2cee6c39c211fbf4db624b8bd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_37105ef9ea57b6289fa1498c0c6871aa48d63dd2cee6c39c211fbf4db624b8bd->enter($__internal_37105ef9ea57b6289fa1498c0c6871aa48d63dd2cee6c39c211fbf4db624b8bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a->leave($__internal_81217fc81ec88bdac45592dabb0c782cf45066e10c82e9a3036cef4143114a9a_prof);
+        $__internal_37105ef9ea57b6289fa1498c0c6871aa48d63dd2cee6c39c211fbf4db624b8bd->leave($__internal_37105ef9ea57b6289fa1498c0c6871aa48d63dd2cee6c39c211fbf4db624b8bd_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f->enter($__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_40163ae0b4b878e3f960249ce8cc9185138933aacf518aa05a548e583b12e552 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_40163ae0b4b878e3f960249ce8cc9185138933aacf518aa05a548e583b12e552->enter($__internal_40163ae0b4b878e3f960249ce8cc9185138933aacf518aa05a548e583b12e552_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
         echo "
     <section id=\"about-us\">
         <div class=\"container\">
             <div class=\"center wow fadeInDown\">
-                <h2>Bienvenue sur Permis Futé !</h2>
+                <h2>Bienvenue sur PermisFuté !</h2>
                 <p class=\"lead\">Auto-école spécialisé dans permis A et permis B<br> depuis 2002.</p>
             </div>
             <div>
                 <img src=";
         // line 13
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/slider_one.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/slider_one.png"), "html", null, true);
         echo " > 
             </div>
         </div>
@@ -219,7 +219,7 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
 </section><!--/#bottom-->
 ";
         
-        $__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f->leave($__internal_0d36ac0043864de5f22765b18d2d831e48e6cc0d90562ebc5dcc6dcf1c42f67f_prof);
+        $__internal_40163ae0b4b878e3f960249ce8cc9185138933aacf518aa05a548e583b12e552->leave($__internal_40163ae0b4b878e3f960249ce8cc9185138933aacf518aa05a548e583b12e552_prof);
 
     }
 
@@ -256,11 +256,11 @@ class __TwigTemplate_e8e392aeea6353edbcd323a8ab8cc8f058bd2378ad2e85d6aef58132cec
     <section id=\"about-us\">
         <div class=\"container\">
             <div class=\"center wow fadeInDown\">
-                <h2>Bienvenue sur Permis Futé !</h2>
+                <h2>Bienvenue sur PermisFuté !</h2>
                 <p class=\"lead\">Auto-école spécialisé dans permis A et permis B<br> depuis 2002.</p>
             </div>
             <div>
-                <img src={{ asset('images/slider_one.jpg') }} > 
+                <img src={{ asset('images/slider_one.png') }} > 
             </div>
         </div>
     </div><!--/.container-->

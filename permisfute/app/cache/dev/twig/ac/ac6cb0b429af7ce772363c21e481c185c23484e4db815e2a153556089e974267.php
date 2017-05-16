@@ -21,20 +21,20 @@ class __TwigTemplate_59b08b35d208daa87adccf5fef3c946c2c7e3b481c6b2e724797169c3e0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cda14a589a8ec296dfc17de7e7a088a42fa6023b61cd87c93af1c36432dcde11 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_cda14a589a8ec296dfc17de7e7a088a42fa6023b61cd87c93af1c36432dcde11->enter($__internal_cda14a589a8ec296dfc17de7e7a088a42fa6023b61cd87c93af1c36432dcde11_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:services.html.twig"));
+        $__internal_a3597cdd52ad8864b302d9b3850c48c0c07ebd731ef4b22ea83393609621c415 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a3597cdd52ad8864b302d9b3850c48c0c07ebd731ef4b22ea83393609621c415->enter($__internal_a3597cdd52ad8864b302d9b3850c48c0c07ebd731ef4b22ea83393609621c415_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "PermisfuteBundle:Default:services.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_cda14a589a8ec296dfc17de7e7a088a42fa6023b61cd87c93af1c36432dcde11->leave($__internal_cda14a589a8ec296dfc17de7e7a088a42fa6023b61cd87c93af1c36432dcde11_prof);
+        $__internal_a3597cdd52ad8864b302d9b3850c48c0c07ebd731ef4b22ea83393609621c415->leave($__internal_a3597cdd52ad8864b302d9b3850c48c0c07ebd731ef4b22ea83393609621c415_prof);
 
     }
 
     // line 4
     public function block_body($context, array $blocks = array())
     {
-        $__internal_4431c61979bead51e8a912112a1c161a720de38a0c0d3b78e85b8d68cd5f70a4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4431c61979bead51e8a912112a1c161a720de38a0c0d3b78e85b8d68cd5f70a4->enter($__internal_4431c61979bead51e8a912112a1c161a720de38a0c0d3b78e85b8d68cd5f70a4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_11ce0738df0c0fada670cd628e673775f52ca0eb010ebf67db31ca5e45f2fe3b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_11ce0738df0c0fada670cd628e673775f52ca0eb010ebf67db31ca5e45f2fe3b->enter($__internal_11ce0738df0c0fada670cd628e673775f52ca0eb010ebf67db31ca5e45f2fe3b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
         echo "
@@ -122,7 +122,7 @@ class __TwigTemplate_59b08b35d208daa87adccf5fef3c946c2c7e3b481c6b2e724797169c3e0
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("images/client2.png"), "html", null, true);
         echo " class=\"img-circle\" alt=\"\">
                         <h3>La partie conduite était parfaite, des moniteurs pédagogues et très précis dans leur explication. Je recommande fortement cette auto école.</h3>
-                        <h4><span>-Barry Goddu /</span>  Cadre chez Allu-me</h4>
+                        <h4><span>-Karim Baidi /</span>  Cadre Web-BKM</h4>
                     </div>
                 </div>
                 <div class=\"col-md-4 wow fadeInDown\">
@@ -196,7 +196,7 @@ class __TwigTemplate_59b08b35d208daa87adccf5fef3c946c2c7e3b481c6b2e724797169c3e0
 </section><!--/#bottom-->
 ";
         
-        $__internal_4431c61979bead51e8a912112a1c161a720de38a0c0d3b78e85b8d68cd5f70a4->leave($__internal_4431c61979bead51e8a912112a1c161a720de38a0c0d3b78e85b8d68cd5f70a4_prof);
+        $__internal_11ce0738df0c0fada670cd628e673775f52ca0eb010ebf67db31ca5e45f2fe3b->leave($__internal_11ce0738df0c0fada670cd628e673775f52ca0eb010ebf67db31ca5e45f2fe3b_prof);
 
     }
 
@@ -299,7 +299,7 @@ class __TwigTemplate_59b08b35d208daa87adccf5fef3c946c2c7e3b481c6b2e724797169c3e0
                     <div class=\"clients-comments text-center\">
                         <img src={{ asset('images/client2.png') }} class=\"img-circle\" alt=\"\">
                         <h3>La partie conduite était parfaite, des moniteurs pédagogues et très précis dans leur explication. Je recommande fortement cette auto école.</h3>
-                        <h4><span>-Barry Goddu /</span>  Cadre chez Allu-me</h4>
+                        <h4><span>-Karim Baidi /</span>  Cadre Web-BKM</h4>
                     </div>
                 </div>
                 <div class=\"col-md-4 wow fadeInDown\">
